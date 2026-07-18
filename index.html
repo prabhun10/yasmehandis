@@ -102,15 +102,21 @@
         }catch(_e){}
     </script>
     <meta charset="utf-8">
+	<style>
+	@media (min-width:768px){
+#home{
+    background-image:url("bg2.jpg");
+}
+}
+	</style>
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-primary selection:text-on-primary">
 
 <!-- TopNavBar -->
- <!-- TopNavBar -->
 <header class="bg-surface/90 dark:bg-surface/90 backdrop-blur-md text-primary docked full-width top-0 z-50 sticky border-b border-outline-variant/30 shadow-sm transition-all duration-300">
     <nav class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto py-4">
         <div class="flex items-center gap-stack-md">
-            <a href="#home" class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed tracking-tight">Yas Mehandis</a>
+            <a href="#home" class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed tracking-tight">Ezhili</a>
         </div>
         
         <!-- Desktop Nav Items -->
@@ -124,7 +130,7 @@
         </ul>
         
         <div class="flex items-center gap-4">
-            <!-- Nav Bar Booking Button (Desktop) -->
+            <!-- Nav Bar Booking Button -->
             <div class="hidden sm:block">
                 <a href="https://wa.me/919361646027?text=Hello%20Yas%20Mehandis!%20%E2%9D%A4%EF%B8%8F%0A%0AI%20would%20like%20to%20book%20a%20Henna%20appointment.%0A%0A%F0%9F%93%85%20Preferred%20Date%3A%20%0A%F0%9F%95%92%20Preferred%20Time%3A%20%0A%F0%9F%92%87%E2%80%8D%E2%99%80%EF%B8%8F%20Occasion%20(Bridal/Festival/Baby%20Shower)%3A%20" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary font-label-md text-xs px-5 py-2.5 rounded-full font-bold shadow-md hover:scale-105 transition-all inline-flex items-center gap-1.5">
                     <span class="material-symbols-outlined text-sm">calendar_month</span> Book Appointment
@@ -138,14 +144,11 @@
         </div>
     </nav>
 
-    <!-- Dark Backdrop Overlay (Blocks clicking behind the menu) -->
+    <!-- Dark Backdrop Overlay -->
     <div id="mobile-menu-overlay" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-50 transition-opacity duration-300 opacity-0 md:hidden"></div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobile-menu" class="hidden fixed inset-y-0 right-0 z-[60] w-full max-w-xs bg-[#2c2a27] border-l border-outline-variant/30 shadow-2xl p-6 transition-transform duration-300 transform translate-x-full md:hidden flex flex-col justify-between opacity-100" style="
-    background: black;
-    height: fit-content;
-">
+    <div id="mobile-menu" class="hidden fixed inset-y-0 right-0 z-[60] w-full max-w-xs bg-[#2c2a27] border-l border-outline-variant/30 shadow-2xl p-6 transition-transform duration-300 transform translate-x-full md:hidden flex flex-col justify-between opacity-100" style="background: black; height: fit-content;">
         <div class="space-y-6">
             <div class="flex justify-between items-center">
                 <span class="font-headline-md text-primary text-xl">Menu</span>
@@ -170,65 +173,38 @@
     </div>
 </header>
 
+<body class="bg-background text-on-surface font-body-md selection:bg-primary selection:text-on-primary">
 <main class="">
-<!-- Hero Section -->
-<section id="home" class="hero-gradient relative overflow-hidden min-h-[85vh] flex items-center scroll-mt-20">
-<div class="absolute inset-0 henna-pattern-overlay"></div>
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-2 gap-gutter items-center relative z-10 py-12">
-<div class="space-y-stack-lg">
-<div class="space-y-stack-sm">
-<p class="font-headline-md text-primary italic">Art in Every Touch <span class="text-secondary">❤</span></p>
-<h1 class="font-display-lg text-display-lg text-on-surface leading-tight">Henna that<br><span class="text-primary italic">Celebrates You</span></h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Premium Henna Cones, Stencils &amp; More for Every Beautiful Moment</p>
+<!-- Updated Hero Section: Fully contained layout for mobile vs desktop cover layout -->
+<section id="home"
+class="relative flex flex-col items-center justify-center md:hidden"><!-- Responsive Dark overlay filter: higher opacity overlay mask on mobile view to read stacked typography safely -->
+<div class="absolute inset-0 hidden md:block bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter w-full relative z-10 pt-16 pb-24 md:py-20 flex flex-col md:flex-row justify-between items-center gap-8">
+  <!-- Content Area -->
+  <div class="space-y-stack-lg max-w-2xl w-full">
+ 
+    <!-- Hero CTA Buttons Area -->
+    <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+      <a href="https://wa.me/919361646027?text=Hello%20Yas%20Mehandis!%20%E2%9D%A4%EF%B8%8F%0A%0AI%20want%20to%20shop%20your%20Henna%20products!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-8 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex justify-center items-center gap-2 group decoration-none shadow-lg">
+          Shop On WhatsApp
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.966 0c3.184.001 6.177 1.24 8.428 3.496 2.25 2.256 3.487 5.253 3.485 8.441-.004 6.621-5.342 11.97-11.913 11.97-2.006-.001-3.973-.506-5.718-1.464L0 24zm6.58-3.447l.38.225c1.552.921 3.424 1.408 5.34 1.409 5.8 0 10.517-4.689 10.52-10.452 0-2.792-1.082-5.417-3.047-7.388C17.525 2.476 14.92 1.396 12.119 1.396 6.32 1.396 1.6 6.086 1.597 11.85c-.001 1.989.517 3.93 1.501 5.656l.244.425-1.001 3.655 3.737-.98.397.236zm10.741-4.706c-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.667.149-.198.297-.766.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.667-1.609-.915-2.203-.242-.581-.487-.502-.667-.511-.173-.008-.371-.01-.569-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
+          </svg>
+      </a>
+      <a href="https://wa.me/919361646027?text=Hello%20Yas%20Mehandis!%20%E2%9D%A4%EF%B8%8F%0A%0AI%20would%20like%20to%20book%20a%20Henna%20appointment.%0A%0A%F0%9F%93%85%20Preferred%20Date%3A%20%0A%F0%9F%95%92%20Preferred%20Time%3A%20%0A%F0%9F%92%87%E2%80%8D%E2%99%80%EF%B8%8F%20Occasion%20(Bridal/Festival/Baby%20Shower)%3A%20" target="_blank" rel="noopener noreferrer" class="border-2 border-primary text-primary px-8 py-4 rounded-full font-bold hover:bg-primary hover:text-on-primary transition-all inline-flex justify-center items-center gap-2 shadow-lg">
+          <span class="material-symbols-outlined text-xl">calendar_month</span> Book Appointment
+      </a>
+    </div>
+  </div>
+
+  <!-- Mobile-Only Dedicated Visual Layer: Shows the whole image fully inside layout flow on small screen viewports without zoom cuts -->
+  <div class="block md:hidden w-full mt-4">
+    <img src="bg2.jpg" class="w-full rounded-2xl border border-outline-variant/30 shadow-xl object-contain" alt="Ezhili Henna Artistry Banner Image">
+  </div>
 </div>
-<div class="flex flex-wrap gap-stack-lg py-4 border-y border-outline-variant/20">
-<div class="flex flex-col items-center text-center gap-1">
-<span class="material-symbols-outlined text-primary">eco</span>
-<span class="text-[10px] uppercase tracking-widest font-bold">Organic &amp; Natural</span>
-</div>
-<div class="flex flex-col items-center text-center gap-1">
-<span class="material-symbols-outlined text-primary">spa</span>
-<span class="text-[10px] uppercase tracking-widest font-bold">Skin Friendly</span>
-</div>
-<div class="flex flex-col items-center text-center gap-1">
-<span class="material-symbols-outlined text-primary">science</span>
-<span class="text-[10px] uppercase tracking-widest font-bold">No Chemicals</span>
-</div>
-<div class="flex flex-col items-center text-center gap-1">
-<span class="material-symbols-outlined text-primary">schedule</span>
-<span class="text-[10px] uppercase tracking-widest font-bold">Long Lasting</span>
-</div>
-<div class="flex flex-col items-center text-center gap-1">
-<span class="material-symbols-outlined text-primary">favorite</span>
-<span class="text-[10px] uppercase tracking-widest font-bold">Loved by Thousands</span>
-</div>
-</div>
-<!-- Updated Hero CTA Buttons Area -->
-<div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
-  <a href="https://wa.me/919361646027?text=Hello%20Yas%20Mehandis!%20%E2%9D%A4%EF%B8%8F%0A%0AI%20want%20to%20shop%20your%20Henna%20products!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-8 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex justify-center items-center gap-2 group decoration-none shadow-lg">
-      Shop On WhatsApp
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24">
-          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.966 0c3.184.001 6.177 1.24 8.428 3.496 2.25 2.256 3.487 5.253 3.485 8.441-.004 6.621-5.342 11.97-11.913 11.97-2.006-.001-3.973-.506-5.718-1.464L0 24zm6.58-3.447l.38.225c1.552.921 3.424 1.408 5.34 1.409 5.8 0 10.517-4.689 10.52-10.452 0-2.792-1.082-5.417-3.047-7.388C17.525 2.476 14.92 1.396 12.119 1.396 6.32 1.396 1.6 6.086 1.597 11.85c-.001 1.989.517 3.93 1.501 5.656l.244.425-1.001 3.655 3.737-.98.397.236zm10.741-4.706c-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.667.149-.198.297-.766.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.667-1.609-.915-2.203-.242-.581-.487-.502-.667-.511-.173-.008-.371-.01-.569-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
-      </svg>
-  </a>
-  <a href="https://wa.me/919361646027?text=Hello%20Yas%20Mehandis!%20%E2%9D%A4%EF%B8%8F%0A%0AI%20would%20like%20to%20book%20a%20Henna%20appointment.%0A%0A%F0%9F%93%85%20Preferred%20Date%3A%20%0A%F0%9F%95%92%20Preferred%20Time%3A%20%0A%F0%9F%92%87%E2%80%8D%E2%99%80%EF%B8%8F%20Occasion%20(Bridal/Festival/Baby%20Shower)%3A%20" target="_blank" rel="noopener noreferrer" class="border-2 border-primary text-primary px-8 py-4 rounded-full font-bold hover:bg-primary hover:text-on-primary transition-all inline-flex justify-center items-center gap-2 shadow-lg">
-      <span class="material-symbols-outlined text-xl">calendar_month</span> Book Appointment
-  </a>
-</div>
-</div>
-<div class="relative flex justify-center items-center">
-<div class="absolute -z-10 w-full h-full bg-primary/10 rounded-full blur-3xl"></div>
-<div class="relative">
-<img src="backg2.jpg" class="rounded-3xl shadow-2xl border-4 border-primary/20 w-full max-w-lg object-cover aspect-[4/5]" data-alt="Premium, high-quality photograph of a woman's hands adorned with intricate, traditional bridal mehndi/henna patterns. The style is elegant and artisanal, with warm, soft lighting highlighting the detail of the henna."
->
-<div class="absolute top-10 -right-10 bg-henna-deep/80 backdrop-blur-md p-6 rounded-2xl border border-primary/30 shadow-xl hidden lg:block">
-<p class="font-headline-md text-primary">Crafted<br>with Care &amp;<br>Tradition <span class="text-secondary">❤</span></p>
-</div>
-</div>
-</div>
-</div>
+
 <!-- Trust Bar -->
-<div class="absolute bottom-0 w-full bg-surface-container-low py-4 border-t border-outline-variant/30">
+<div class="absolute bottom-0 w-full bg-surface-container-low py-4 border-t border-outline-variant/30 z-10">
 <div class="max-w-container-max mx-auto px-margin-mobile flex justify-around flex-wrap gap-4 text-primary opacity-80">
 <div class="flex items-center gap-2 font-label-md"><span class="material-symbols-outlined">verified</span> 100% Organic</div>
 <div class="flex items-center gap-2 font-label-md"><span class="material-symbols-outlined">science</span> Chemical Free</div>
@@ -253,56 +229,46 @@
 <!-- Product Card 1 -->
 <div class="bg-surface-container-lowest/50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-outline-variant/10">
 <div class="relative overflow-hidden rounded-lg mb-4 aspect-square">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Intricate bridal henna stencil designs showcasing a full palm and back-of-hand layout with delicate floral and geometric patterns. The product is displayed on a warm, parchment-style background with soft shadows, highlighting the artisanal handcrafted detail. Premium packaging is visible in the corner." 
-src="cat1.png">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Intricate bridal henna stencil designs" src="cat1.png">
 <span class="absolute top-2 left-2 bg-primary-container text-on-primary-container text-[10px] font-bold px-2 py-1 rounded">BESTSELLER</span>
 </div>
 <h3 class="font-title-lg text-surface mb-1">Bridal Stencils</h3>
 <p class="text-surface-variant text-sm mb-4">Intricate designs for your big day</p>
-<a href="https://wa.me/919361646027?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
+<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
     Shop On WhatsApp
-    
 </a>
 </div>
 <!-- Product Card 2 -->
 <div class="bg-surface-container-lowest/50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-outline-variant/10">
 <div class="relative overflow-hidden rounded-lg mb-4 aspect-square">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Semi-bridal henna stencils featuring elegant, medium-coverage designs for festivals and celebrations. The image shows a set of stencils with classic South Asian motifs like peacocks and mandalas, set against a warm, inviting organic aesthetic with soft, natural lighting." 
-src="cat2.png">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Semi-bridal henna stencils" src="cat2.png">
 </div>
 <h3 class="font-title-lg text-surface mb-1">Semi Bridal Stencils</h3>
 <p class="text-surface-variant text-sm mb-4">Elegant designs for every celebration</p>
-<a href="https://wa.me/919361646027?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
+<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
     Shop On WhatsApp
-    
 </a>
 </div>
 <!-- Product Card 3 -->
 <div class="bg-surface-container-lowest/50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-outline-variant/10">
 <div class="relative overflow-hidden rounded-lg mb-4 aspect-square">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cute baby shower henna stencil patterns featuring miniature footprints, stars, and tiny floral accents. The scene is bright and airy with soft pink and cream tones, including small props like baby shoes or rattles to create a joyful, miracle-celebrating mood." 
-src="cat3.png"
->
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Baby shower henna stencil patterns" src="cat3.png">
 </div>
 <h3 class="font-title-lg text-surface mb-1">Baby Shower Stencils</h3>
 <p class="text-surface-variant text-sm mb-4">Adorable &amp; cute designs for your little miracles</p>
-<a href="https://wa.me/919361646027?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
+<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
     Shop On WhatsApp
-    
 </a>
 </div>
 <!-- Product Card 4 -->
 <div class="bg-surface-container-lowest/50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-outline-variant/10">
 <div class="relative overflow-hidden rounded-lg mb-4 aspect-square">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-quality organic henna cones and a small bowl of fresh henna dip paste. The cones are made from artisanal kraft paper with elegant foil labeling. The rich, dark henna paste is textured and fresh, surrounded by natural elements like henna leaves and dried flowers in a warm, premium tabletop setting." 
-src="cat4.png"
->
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Organic henna cones and dip" src="cat4.png">
 </div>
 <h3 class="font-title-lg text-surface mb-1">Henna Cones &amp; Dip</h3>
 <p class="text-surface-variant text-sm mb-4">Rich color, smooth application, long lasting</p>
-<a href="https://wa.me/919361646027?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
+<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
     Shop On WhatsApp
-    
 </a>
 </div>
 </div>
@@ -316,9 +282,8 @@ src="cat4.png"
 </div>
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-4 gap-gutter items-start">
 <div class="md:col-span-1 space-y-4">
-<h2 class="font-headline-lg text-headline-lg text-primary">Why Choose Yas Mehandis?<span class="text-secondary">❤</span></h2>
+<h2 class="font-headline-lg text-headline-lg text-primary">Why Choose Ezhili?<span class="text-secondary">❤</span></h2>
 <p class="text-on-surface-variant">Because you deserve the best henna experience with products that are safe, natural, and stunning.</p>
- 
 </div>
 <div class="md:col-span-3 grid grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
 <div class="space-y-3">
@@ -397,32 +362,20 @@ src="cat4.png"
 <div class="absolute inset-0 bg-primary-container/20 rounded-2xl group-hover:scale-105 transition-transform"></div>
 <div class="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-surface-container-lowest/10">
 <a href="http://www.youtube.com/watch?v=ajSLVWB84oQ" target="_blank" rel="noopener noreferrer" class="block relative group cursor-pointer">
-  <!-- Hover Background Scale Effect -->
   <div class="absolute inset-0 bg-primary-container/20 rounded-2xl group-hover:scale-105 transition-transform"></div>
-  
-  <!-- Image Container -->
   <div class="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-surface-container-lowest/10">
-    <img 
-      class="w-full aspect-video object-cover" 
-      alt="A professional tutorial video thumbnail showing a woman applying henna through a stencil onto a client's hand." 
-      src="videobg.png"
-    >
-    
-    <!-- Play Button Overlay -->
+    <img class="w-full aspect-video object-cover" alt="Tutorial video thumbnail showing stencil application." src="videobg.png">
     <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-all">
       <div class="bg-secondary-container text-on-secondary-container w-16 h-16 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
         <span class="material-symbols-outlined text-4xl fill">play_arrow</span>
       </div>
     </div>
-    
-    <!-- Info Badge -->
     <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur p-4 rounded-xl max-w-xs shadow-lg">
       <p class="text-surface font-bold text-sm">Watch &amp; Learn</p>
       <p class="text-surface-variant text-xs">Step-by-step video tutorial for perfect application</p>
     </div>
   </div>
 </a>
- 
 </div>
 </div>
 </div>
@@ -497,17 +450,15 @@ src="cat4.png"
 </section>
 </main>
 
-<!-- Footer (Contact section wrapper) -->
+<!-- Footer -->
 <footer id="contact" class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width mt-section-gap border-t border-outline-variant/20 scroll-mt-20">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto py-12">
 <div class="space-y-4">
-<h2 class="font-headline-md text-headline-md text-primary">Yas Mehandis</h2>
+<h2 class="font-headline-md text-headline-md text-primary">Ezhili</h2>
 <p class="text-on-surface-variant font-body-md text-body-md">HENNA WITH LOVE</p>
 <p class="text-on-surface-variant text-sm">Bringing tradition, beauty &amp; purity to your special moments.</p>
 <div class="flex gap-4">
 <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://www.instagram.com/yas_mehndis_karur/"><span class="material-symbols-outlined">camera</span></a>
- 
- 
 </div>
 </div>
 <div class="">
@@ -544,12 +495,10 @@ src="cat4.png"
 <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">local_shipping</span> Fast Delivery</div>
 <div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">cached</span> Easy Returns</div>
 </div>
-<p class="text-xs text-on-surface-variant/70">© 2026 Yas Mehandis. All Rights Reserved. Designed By Prabhu</p>
+<p class="text-xs text-on-surface-variant/70">© 2026 Ezhili. All Rights Reserved. Designed By Prabhu</p>
 </div>
 </footer>
 
-<!-- Interactive Mobile Responsive Menu Logic -->
-<!-- Interactive Mobile Responsive Menu Logic -->
 <!-- Interactive Mobile Responsive Menu Logic -->
 <script>
     const menuBtn = document.getElementById('mobile-menu-btn');
@@ -562,7 +511,6 @@ src="cat4.png"
         mobileMenu.classList.remove('hidden');
         overlay.classList.remove('hidden');
         
-        // Small timeout to trigger CSS transitions smoothly
         setTimeout(() => {
             mobileMenu.classList.remove('translate-x-full');
             mobileMenu.classList.add('translate-x-0');
@@ -585,7 +533,7 @@ src="cat4.png"
 
     menuBtn.addEventListener('click', openMenu);
     closeBtn.addEventListener('click', closeMenu);
-    overlay.addEventListener('click', closeMenu); // Closes menu if user clicks outside
+    overlay.addEventListener('click', closeMenu);
 
     navLinks.forEach(link => {
         link.addEventListener('click', closeMenu);

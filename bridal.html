@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yas Mehandis</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "surface-container": "#ffe9eb",
+                  "on-secondary-fixed-variant": "#5b4300",
+                  "on-error-container": "#93000a",
+                  "tertiary-fixed-dim": "#76db8f",
+                  "on-primary-fixed": "#3f0016",
+                  "surface-variant": "#f8dcdf",
+                  "secondary-container": "#ffd575",
+                  "secondary-fixed": "#ffdf9b",
+                  "inverse-surface": "#3d2c2f",
+                  "primary": "#a80048",
+                  "secondary-fixed-dim": "#eac164",
+                  "inverse-on-surface": "#ffecee",
+                  "outline-variant": "#e2bdc3",
+                  "on-surface": "#27171a",
+                  "on-tertiary-container": "#baffc4",
+                  "surface-bright": "#fff8f7",
+                  "outline": "#8e6f74",
+                  "on-primary": "#ffffff",
+                  "primary-container": "#d1175e",
+                  "marigold-orange": "#F2994A",
+                  "on-secondary-fixed": "#251a00",
+                  "tertiary-fixed": "#92f8a9",
+                  "surface-container-low": "#fff0f1",
+                  "on-error": "#ffffff",
+                  "background": "#fff8f7",
+                  "surface-warm": "#FAF9F6",
+                  "on-primary-container": "#ffe9ec",
+                  "surface": "#fff8f7",
+                  "on-primary-fixed-variant": "#90003c",
+                  "on-secondary-container": "#795a00",
+                  "on-tertiary-fixed-variant": "#005225",
+                  "inverse-primary": "#ffb1c0",
+                  "error": "#ba1a1a",
+                  "tertiary": "#00612d",
+                  "on-background": "#27171a",
+                  "error-container": "#ffdad6",
+                  "surface-container-lowest": "#ffffff",
+                  "on-tertiary-fixed": "#00210b",
+                  "secondary": "#785a00",
+                  "primary-fixed-dim": "#ffb1c0",
+                  "on-secondary": "#ffffff",
+                  "surface-dim": "#f0d3d7",
+                  "primary-fixed": "#ffd9df",
+                  "surface-container-high": "#fee1e5",
+                  "surface-container-highest": "#f8dcdf",
+                  "on-surface-variant": "#5a4044",
+                  "mehendi-green": "#4B5320",
+                  "tertiary-container": "#007d3c",
+                  "on-tertiary": "#ffffff",
+                  "surface-tint": "#bc0051"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.125rem",
+                  "lg": "0.25rem",
+                  "xl": "0.5rem",
+                  "full": "0.75rem"
+          },
+          "spacing": {
+                  "stack-sm": "8px",
+                  "stack-md": "16px",
+                  "container-max": "1280px",
+                  "margin-mobile": "20px",
+                  "section-gap": "80px",
+                  "margin-desktop": "64px",
+                  "gutter": "24px"
+          },
+          "fontFamily": {
+                  "body-md": ["Plus Jakarta Sans"],
+                  "label-sm": ["Plus Jakarta Sans"],
+                  "body-lg": ["Plus Jakarta Sans"],
+                  "display-lg": ["Libre Caslon Text"],
+                  "headline-lg": ["Libre Caslon Text"],
+                  "headline-lg-mobile": ["Libre Caslon Text"],
+                  "title-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+                  "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                  "label-sm": ["12px", {"lineHeight": "1.5", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                  "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                  "display-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                  "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                  "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                  "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .stencil-card-hover:hover .add-to-cart-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #fff8f7;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #e2bdc3;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-primary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="bg-surface sticky top-0 z-50 border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">
+        Yas Mehandis
+      </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant font-medium hover:text-primary-container transition-colors duration-200 font-label-sm text-label-sm" href="index.html">Home</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-sm text-label-sm" href="bridal.html">Collections</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-container transition-colors duration-200 font-label-sm text-label-sm" href="contactus.html">Contactus</a>
+</nav>
+<div class="flex items-center space-x-6">
+ 
+</div>
+</div>
+</header>
+<!-- Hero / Category Header -->
+<section class="bg-surface-container py-section-gap overflow-hidden relative">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle, #a80048 1px, transparent 1px); background-size: 40px 40px;"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10 flex flex-col md:flex-row items-center gap-gutter">
+<div class="flex-1 text-center md:text-left">
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-4 block">Exquisite Collection</span>
+<h1 class="font-display-lg text-display-lg mb-6 text-on-surface">Bridal Stencils</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-8">
+          Elevate your wedding aesthetics with our meticulously crafted bridal henna stencils. Designed for the modern bride who cherishes tradition through intricate, high-definition patterns.
+        </p>
+</div>
+<div class="flex-1 w-full md:w-auto grid grid-cols-2 gap-4">
+<div class="rounded-xl overflow-hidden shadow-xl aspect-[3/4]">
+<img alt="Bridal henna design featured stencil" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuscIvS0Jt_PfKAWxQSLvL34Nu8QpLTxwh5nHWz-8wWVCZ0NQRcDkj2xS1d5yp7QpSiubgmoXi5gVCGue2cspHnJaoRJaA7Wy7x3nzOaxa9o5aC4Q-vsXNQIoc9p-Dvhphwc247ElQQwMZSSi3a-i6JiR5VTetJ_tgcj6cRokkYRifOHSdMgDNs6N0kY_M9ca0AH1LQTcFLSyobbeK87-RCYPgOggX_9OaiNeJhkGEkF2zkjrOtrsSOMx0"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-xl aspect-[3/4] mt-8">
+<img alt="Traditional wedding henna patterns" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLt3OzivCQX6uMv3uVOKbEwfsuSWqL2cda7qKWoXxvFGAHS3UOLPnhHJkpyPmazJ6hkJDWI3BGTcxQR0-JlKqzFnaNfrI0r0bR096yqD2BdCn1dP-yXC5Qq4HtQvmWvPffnNCWLngF5yVPwz04hkSNoTUvkQWYsXY0Nz8C8dS8HC07Ap1vCSFJPiqW0e_i-Mra2JQDhomnXdfk136n1wdXeYJWJo-B9lT6f4sSmbavKjSVJAIR_6chhr09Tf"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Collection Body -->
+<main class="max-w-container-max mx-auto px-margin-desktop py-section-gap">
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Filters -->
+ 
+<!-- Grid -->
+<section class="flex-1">
+<div class="flex justify-between items-center mb-8">
+ 
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group stencil-card-hover flex flex-col">
+<div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-surface-container-low border border-outline-variant group-hover:border-primary transition-colors duration-300">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-resolution product shot of a bridal henna stencil featuring a detailed mandala pattern, laid out on a soft pink silk fabric with gold embroidery accents. Soft lighting from the side highlights the fine lines of the stencil. Elegant, high-end ecommerce photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKHF9idSGLYqQjDulJaBuA5WIsEh7b5nW4eSsrlwXvg-zYu89_CE888Cw-54JaNQgZu6jIWQuR9lJ8iqk8NDGeT9T15fyteL75OXz9sxwLyWgy16wmAgELJUHylruVzo4ibu8m_3dCqHLEIksfdPu8K9OQ1PZfTpZfBNCCzNMnFkzzisSkUNXAzej7ZDWB_YLKI_HkgOlDXnJB4uBphyZ913ILG-wYLi_U6t49lA-KofEva04yUkUuVw"/>
+<div class="add-to-cart-overlay absolute inset-0 bg-primary/20 backdrop-blur-sm flex items-center justify-center opacity-0 transform translate-y-4 transition-all duration-300">
+<button class="bg-primary text-white px-8 py-3 font-label-sm text-label-sm uppercase tracking-widest shadow-lg hover:bg-primary-container transition-colors">Add to Cart</button>
+</div>
+<span class="absolute top-4 left-4 bg-marigold-orange text-white px-3 py-1 font-label-sm text-label-sm uppercase">Best Seller</span>
+</div>
+<div class="mt-4 flex flex-col gap-1">
+<h3 class="font-headline-lg text-[20px] text-on-surface group-hover:text-primary transition-colors">Royal Mandala Suite</h3>
+<p class="text-on-surface-variant text-body-md">Traditional full hand coverage</p>
+<span class="text-primary font-bold font-title-md text-title-md mt-2">Rs. 2,499</span>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group stencil-card-hover flex flex-col">
+<div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-surface-container-low border border-outline-variant group-hover:border-primary transition-colors duration-300">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up photography of an intricate henna stencil for bridal hands, featuring delicate vine and floral motifs. The stencil is photographed against a neutral warm background with soft shadows. The lighting is bright and clean, emphasizing the precision of the laser-cut design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrVLgrxN_FwXknF_A9TFgMKRXZBy0hhNFbrgRBMxl7w7AXeWps93ELa9sPakLsgUVEpjdg1QfAJtyIsFh9C1CC0wnDS24DedTSs-29niFhZYku_2URyzovusxXmz0mSdZMrQKNeTFizqhuOVgEWEQUGtitw-8ERmGQTCLfP6tJOJ46MVs8vRDri6ySVNd7xW65miDfyx-JRdSTeID5KiAdL2E2p4-tz44q_jXIXTGTclnyUZVmvJc5oA"/>
+<div class="add-to-cart-overlay absolute inset-0 bg-primary/20 backdrop-blur-sm flex items-center justify-center opacity-0 transform translate-y-4 transition-all duration-300">
+<button class="bg-primary text-white px-8 py-3 font-label-sm text-label-sm uppercase tracking-widest shadow-lg hover:bg-primary-container transition-colors">Add to Cart</button>
+</div>
+</div>
+<div class="mt-4 flex flex-col gap-1">
+<h3 class="font-headline-lg text-[20px] text-on-surface group-hover:text-primary transition-colors">Eternal Vines Bridal</h3>
+<p class="text-on-surface-variant text-body-md">Contemporary minimal vines</p>
+<span class="text-primary font-bold font-title-md text-title-md mt-2">Rs. 1,850</span>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group stencil-card-hover flex flex-col">
+<div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-surface-container-low border border-outline-variant group-hover:border-primary transition-colors duration-300">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious bridal henna stencil display showcasing a peacock motif design. The stencil is held by a hand with polished nails against a background of scattered jasmine flowers. High-key lighting, bright festive mood, vibrant pink and gold color palette accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVZCyx1wo6Z2rSn0BMl2WF4SDFFF4yXWXcQfMh7KmB2gzeRu1EOpi9DJRldq6pyMfsLBxXokl7n_0UH71uxH1y-G4XK65r18jQ121Tq2qiNJEc9xhtcflvI1hS0SJ8LCHXUIRRbkz_kwNOwdBYy6SvmfQir5MpBdHjP96uQgkc3w00zIViAKmrM2bqf-h91aqjkZW7zCS8h2Z363ZNG1LUfDwn6hp9-RaXUGnZleQA0SeBvRJmqQDrGg"/>
+<div class="add-to-cart-overlay absolute inset-0 bg-primary/20 backdrop-blur-sm flex items-center justify-center opacity-0 transform translate-y-4 transition-all duration-300">
+<button class="bg-primary text-white px-8 py-3 font-label-sm text-label-sm uppercase tracking-widest shadow-lg hover:bg-primary-container transition-colors">Add to Cart</button>
+</div>
+</div>
+<div class="mt-4 flex flex-col gap-1">
+<h3 class="font-headline-lg text-[20px] text-on-surface group-hover:text-primary transition-colors">Celestial Peacock</h3>
+<p class="text-on-surface-variant text-body-md">Majestic bird-themed motifs</p>
+<span class="text-primary font-bold font-title-md text-title-md mt-2">Rs. 2,199</span>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group stencil-card-hover flex flex-col">
+<div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-surface-container-low border border-outline-variant group-hover:border-primary transition-colors duration-300">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Macro shot of a laser cut stencil for henna application, showing the extreme detail of an Arabic geometric bridal pattern. The stencil is silver-gray, reflecting soft warm light. The background is a soft focus wedding invitation with gold foil details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0gq8SGgvYS5kHA9sYwYz8i_r8LiMjyRCR-TU5aMq2JGNDselUv_11W6GVjB_DQpbw4TIjZy7-NK2-AgNHUhgngXlN_2BuC_Qu7oXSzwlc-a5tJhhTEtf8nWqItbiw0stsoqAonqA6evfZa26NSRmVng9lyDzRvvrvtXiElQbaOumZwgC734hvV6fKSgGaldD-n_up3IAOqAwnxu23eZKFXaFgzZYnD-Kx7jEFO1abSjmjD6_zfA1w-g"/>
+<div class="add-to-cart-overlay absolute inset-0 bg-primary/20 backdrop-blur-sm flex items-center justify-center opacity-0 transform translate-y-4 transition-all duration-300">
+<button class="bg-primary text-white px-8 py-3 font-label-sm text-label-sm uppercase tracking-widest shadow-lg hover:bg-primary-container transition-colors">Add to Cart</button>
+</div>
+</div>
+<div class="mt-4 flex flex-col gap-1">
+<h3 class="font-headline-lg text-[20px] text-on-surface group-hover:text-primary transition-colors">Geometric Harmony</h3>
+<p class="text-on-surface-variant text-body-md">Arabic inspired precision</p>
+<span class="text-primary font-bold font-title-md text-title-md mt-2">Rs. 1,600</span>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group stencil-card-hover flex flex-col">
+<div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-surface-container-low border border-outline-variant group-hover:border-primary transition-colors duration-300">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Elegant henna stencil for feet application, featuring a delicate lotus flower design. The stencil is presented on a mirrored surface with pink flower petals scattered around. The lighting is soft and ethereal, creating a boutique beauty product feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZdq4Lrt2qfD1wHlTgOGvpTqaWbyUJYU28n_jbv-95uaRILoIy7diCaNQ73xBFnt-YF5X4ZMT5u9iPQ1oJH1KwvIkwlZlHWmrlnCkkJSGRJxqFGIVEntzaUZh3BiLVQyeLPZgw6nRFJO1AHf5HfhkZjtRU6tsr0B6gT2OrWbgTGAQmjdYu7yN_twLgjtMWPMpbY5aJspfve17zE7c3XXFUA8rzgquO1aluUnsdzVJnmHEQ-joU6CU2EQ"/>
+<div class="add-to-cart-overlay absolute inset-0 bg-primary/20 backdrop-blur-sm flex items-center justify-center opacity-0 transform translate-y-4 transition-all duration-300">
+<button class="bg-primary text-white px-8 py-3 font-label-sm text-label-sm uppercase tracking-widest shadow-lg hover:bg-primary-container transition-colors">Add to Cart</button>
+</div>
+</div>
+<div class="mt-4 flex flex-col gap-1">
+<h3 class="font-headline-lg text-[20px] text-on-surface group-hover:text-primary transition-colors">Goddess Lotus Set</h3>
+<p class="text-on-surface-variant text-body-md">Bridal foot and ankle kit</p>
+<span class="text-primary font-bold font-title-md text-title-md mt-2">Rs. 1,450</span>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group stencil-card-hover flex flex-col">
+<div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-surface-container-low border border-outline-variant group-hover:border-primary transition-colors duration-300">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A collection of small bridal henna stencils for fingers and palms, laid out in an organized grid on a rich deep pink velvet cloth. The gold details of the velvet catch the light. The mood is celebratory and boutique. Clean, sharp photography for an e-commerce catalog." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6A1qAAvRyiRifAXpv8kCpj4sk4iUz0qm07VTjo8Z2TIaSjtfeRkegQKLl6IwEXTwB086j7HDYe58Oo-xH32fwsjPUMVl4m6gA5hWdkAVA3ou429tR1AcM49f-wYR7OMhyQagwcWnoFkhrN9kPn_pcZhaawlf3SDgnTNCQ2N3VldhN-Kg5tyDJSSEM7cgUBya2_dk7y7ax5Z7mePy5HKKQ5KKMu2Yv7WR54RiEL63JvN5ZcT9BydpOUA"/>
+<div class="add-to-cart-overlay absolute inset-0 bg-primary/20 backdrop-blur-sm flex items-center justify-center opacity-0 transform translate-y-4 transition-all duration-300">
+<button class="bg-primary text-white px-8 py-3 font-label-sm text-label-sm uppercase tracking-widest shadow-lg hover:bg-primary-container transition-colors">Add to Cart</button>
+</div>
+</div>
+<div class="mt-4 flex flex-col gap-1">
+<h3 class="font-headline-lg text-[20px] text-on-surface group-hover:text-primary transition-colors">Intricate Palms Duo</h3>
+<p class="text-on-surface-variant text-body-md">Precision palm stencils</p>
+<span class="text-primary font-bold font-title-md text-title-md mt-2">Rs. 999</span>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+ 
+</section>
+</div>
+</main>
+<!-- Newsletter / CTA -->
+ 
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="space-y-4">
+<div class="font-title-md text-title-md font-bold text-on-surface tracking-tight">Yas Mehandis </div>
+<p class="text-on-surface-variant text-body-md font-body-md">Celebrating Henna Artistry through precision and modern design for all your festive moments.</p>
+<div class="flex space-x-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-6">Quick Links</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Contact Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Shipping Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">FAQs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-6">Customer Care</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Return Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-all" href="#">Bulk Orders</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-6">Store Info</h4>
+<div class="space-y-3 text-on-surface-variant text-body-md">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-sm mt-1">location_on</span>
+<span>Location: Rayanur , Karur.<br>
+Contact  No:+91 93616 46027</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">call</span>
+<span>+91 93616 46027</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant py-6 text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Yash Stencil Store. Celebrating Henna Artistry.</p>
+</div>
+</footer>
+<!-- Scripts for Interactions -->
+<script>
+    // Simple micro-interaction for filter highlighting
+    document.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach(input => {
+      input.addEventListener('change', (e) => {
+        const span = e.target.nextElementSibling;
+        if (e.target.checked) {
+          span.classList.add('text-primary', 'font-bold');
+        } else {
+          span.classList.remove('text-primary', 'font-bold');
+        }
+      });
+    });
+
+    // Expand search bar on focus
+    const searchInput = document.querySelector('input[type="text"]');
+    searchInput.addEventListener('focus', () => {
+      searchInput.classList.add('border-primary');
+    });
+    searchInput.addEventListener('blur', () => {
+      if(!searchInput.value) searchInput.classList.remove('border-primary');
+    });
+  </script>
+</body></html>

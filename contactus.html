@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Yas Mehandis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary-fixed-variant": "#005225",
+                "background": "#fff8f7",
+                "tertiary": "#00612d",
+                "on-surface": "#27171a",
+                "on-secondary-container": "#795a00",
+                "inverse-primary": "#ffb1c0",
+                "on-error": "#ffffff",
+                "surface-bright": "#fff8f7",
+                "surface-warm": "#FAF9F6",
+                "secondary": "#785a00",
+                "inverse-on-surface": "#ffecee",
+                "tertiary-fixed-dim": "#76db8f",
+                "primary": "#a80048",
+                "on-primary-fixed": "#3f0016",
+                "secondary-fixed": "#ffdf9b",
+                "surface-dim": "#f0d3d7",
+                "on-tertiary-container": "#baffc4",
+                "on-error-container": "#93000a",
+                "surface-container": "#ffe9eb",
+                "on-tertiary-fixed": "#00210b",
+                "mehendi-green": "#4B5320",
+                "surface-container-low": "#fff0f1",
+                "outline-variant": "#e2bdc3",
+                "surface": "#fff8f7",
+                "on-secondary-fixed": "#251a00",
+                "surface-variant": "#f8dcdf",
+                "surface-container-high": "#fee1e5",
+                "secondary-fixed-dim": "#eac164",
+                "primary-fixed": "#ffd9df",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-fixed-variant": "#90003c",
+                "tertiary-fixed": "#92f8a9",
+                "secondary-container": "#ffd575",
+                "outline": "#8e6f74",
+                "marigold-orange": "#F2994A",
+                "on-tertiary": "#ffffff",
+                "surface-container-highest": "#f8dcdf",
+                "surface-tint": "#bc0051",
+                "on-primary-container": "#ffe9ec",
+                "inverse-surface": "#3d2c2f",
+                "on-secondary-fixed-variant": "#5b4300",
+                "on-secondary": "#ffffff",
+                "on-background": "#27171a",
+                "primary-container": "#d1175e",
+                "on-primary": "#ffffff",
+                "tertiary-container": "#007d3c",
+                "on-surface-variant": "#5a4044",
+                "error": "#ba1a1a",
+                "primary-fixed-dim": "#ffb1c0"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "stack-sm": "8px",
+                "margin-mobile": "20px",
+                "stack-md": "16px",
+                "section-gap": "80px",
+                "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                "label-sm": ["Plus Jakarta Sans"],
+                "headline-lg-mobile": ["Libre Caslon Text"],
+                "display-lg": ["Libre Caslon Text"],
+                "body-md": ["Plus Jakarta Sans"],
+                "body-lg": ["Plus Jakarta Sans"],
+                "headline-lg": ["Libre Caslon Text"],
+                "title-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                "label-sm": ["12px", {"lineHeight": "1.5", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "display-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .henna-pattern {
+            background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+            opacity: 0.05;
+        }
+        .mandala-bg {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, #e2bdc3 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+            filter: blur(40px);
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed">
+<!-- TopAppBar -->
+<header class="bg-surface sticky top-0 z-50 border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">
+                Yas Mehandis            </div>
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-sm text-label-sm" href="index.html">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-sm text-label-sm" href="bridal.html">Collections</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-sm text-label-sm" href="contactus.html">Contact US</a>
+</nav>
+ 
+</div>
+</header>
+<main class="relative overflow-hidden min-h-screen">
+<!-- Subtle Background Accents -->
+<div class="henna-pattern absolute inset-0 pointer-events-none"></div>
+<div class="mandala-bg"></div>
+<!-- Header Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-16 md:pt-24 pb-12 text-center relative z-10">
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Get in Touch</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                Whether you're preparing for a wedding, a festival, or just exploring the beauty of henna artistry, our team is here to help you find the perfect stencils for your celebration.
+            </p>
+<div class="w-24 h-1 bg-marigold-orange mx-auto mt-8 opacity-50"></div>
+</section>
+<!-- Main Content: Two-Column Layout -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<!-- Left Column: Contact Details -->
+<div class="space-y-12">
+<div class="p-8 bg-surface-container-lowest border border-outline-variant shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 transform translate-x-4 -translate-y-4 group-hover:translate-x-2 transition-transform duration-500">
+<span class="material-symbols-outlined text-8xl" data-icon="contact_support">contact_support</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Contact Information</h2>
+<div class="space-y-8">
+<!-- WhatsApp -->
+<div class="flex items-start gap-4">
+<div class="bg-primary-container p-3 rounded-full text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="chat_bubble" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-1">WhatsApp</p>
+<a class="font-title-md text-title-md text-on-surface hover:text-primary transition-colors" href="https://wa.me/9361646027">+919361646027</a>
+</div>
+</div>
+<!-- Email -->
+<div class="flex items-start gap-4">
+<div class="bg-primary-container p-3 rounded-full text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="mail" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-1">Email</p>
+<a class="font-title-md text-title-md text-on-surface hover:text-primary transition-colors" href="mailto:Yashstencilstore@gmail.com">Yashmehandis@gmail.com</a>
+</div>
+</div>
+<!-- Store Info -->
+<div class="flex items-start gap-4">
+<div class="bg-primary-container p-3 rounded-full text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-1">Store Info</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                        Rayanur,Karur
+                                    </p>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-outline-variant">
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-4">Follow Our Artistry</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center rounded-full border border-outline text-primary hover:bg-primary hover:text-white transition-all duration-300" href="https://www.instagram.com/_violet_box?igsh=MTRmYjMzODFlamY1Zw==">
+<span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span>
+</a>
+ 
+</div>
+</div>
+</div>
+<!-- Decorative Map Mockup/Graphic -->
+ 
+</div>
+<!-- Right Column: Contact Form -->
+ 
+</div>
+</section>
+<!-- Decorative Floral Border Motif -->
+<div class="flex justify-center py-section-gap opacity-30">
+<div class="flex gap-4 items-center">
+<div class="h-px w-32 bg-marigold-orange"></div>
+<span class="material-symbols-outlined text-marigold-orange text-4xl" data-icon="local_florist">local_florist</span>
+<div class="h-px w-32 bg-marigold-orange"></div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-title-md text-title-md font-bold text-on-surface mb-4">Yas Mehandis</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Celebrating Henna Artistry with precision-cut stencils for every occasion. Modern tools for traditional beauty.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Shop</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">New Arrivals</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Bridal Collection</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Best Sellers</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Support</h4>
+<ul class="space-y-2">
+<li><a class="text-primary font-body-md underline" href="#">Contact Us</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Shipping Policy</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">FAQs</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">About Us</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Legal</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Refund Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-outline-variant px-margin-desktop py-6 text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 Yas Mehandis. Celebrating Henna Artistry.</p>
+</div>
+</footer>
+<script>
+        // Form Interaction Logic
+        const inputs = document.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label').style.color = '#a80048'; // Primary color
+            });
+            input.addEventListener('blur', () => {
+                if (!input.value) {
+                    input.parentElement.querySelector('label').style.color = '';
+                } else {
+                    input.parentElement.querySelector('label').style.color = '#5b4300'; // Success-like color
+                }
+            });
+        });
+
+        // Simple parallex effect for pattern
+        window.addEventListener('scroll', () => {
+            const pattern = document.querySelector('.henna-pattern');
+            const scrolled = window.pageYOffset;
+            pattern.style.transform = `translateY(${scrolled * 0.1}px)`;
+        });
+    </script>
+</body></html>

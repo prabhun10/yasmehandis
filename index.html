@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Yas Mehandis | Henna Artistry</title>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Yas Mehandis | Henna Artistry</title>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -92,303 +91,330 @@
                         "title-md": ["Plus Jakarta Sans"]
                     },
                     "fontSize": {
-                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "label-sm": ["12px", {"lineHeight": "1.5", "letterSpacing": "0.05em", "fontWeight": "700"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "display-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}],
-                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                        "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                        "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.5", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "title-md": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }]
                     }
                 },
             },
         }
     </script>
-<style>
-/* Container styling */
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 40px;
-  right: 40px;
-  background-color: #25d366;
-  color: #fff;
-  border-radius: 50px;
-  text-align: center;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
+    <style>
+        /* Container styling */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
 
-/* Icon scaling */
-.whatsapp-icon {
-  width: 35px;
-  height: 35px;
-  fill: #fff;
-}
+        /* Icon scaling */
+        .whatsapp-icon {
+            width: 35px;
+            height: 35px;
+            fill: #fff;
+        }
 
-/* Hover effects */
-.whatsapp-float:hover {
-  background-color: #20ba5a;
-  transform: translateY(-5px);
-  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.4);
-}
+        /* Hover effects */
+        .whatsapp-float:hover {
+            background-color: #20ba5a;
+            transform: translateY(-5px);
+            box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.4);
+        }
 
-/* Responsive adjustment for Mobile Devices */
-@media screen and (max-width: 768px) {
-  .whatsapp-float {
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    right: 20px;
-  }
-  
-  .whatsapp-icon {
-    width: 28px;
-    height: 28px;
-  }
-}
+        /* Responsive adjustment for Mobile Devices */
+        @media screen and (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-icon {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         .hero-pattern {
             background-image: radial-gradient(circle at 2px 2px, #e2bdc3 1px, transparent 0);
             background-size: 40px 40px;
         }
+
         .nav-item-active {
             border-bottom: 2px solid #a80048;
             padding-bottom: 4px;
         }
+
         .carousel-container {
             scroll-snap-type: x mandatory;
             scrollbar-width: none;
         }
+
         .carousel-container::-webkit-scrollbar {
             display: none;
         }
+
         .carousel-item {
             scroll-snap-align: start;
         }
     </style>
 </head>
+
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
-<!-- TopAppBar -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-surface border-b border-outline-variant">
-<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
-<!-- Brand Logo -->
-<div class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">
+    <!-- TopAppBar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-surface border-b border-outline-variant transition-transform duration-300">
+        <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto relative z-50 bg-surface">
+            <!-- Brand Logo -->
+            <div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary tracking-tight">
                 Yas Mehandis
             </div>
-<!-- Navigation Links (Desktop) -->
-<nav class="hidden lg:flex items-center gap-8">
-<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-sm text-label-sm" href="index.html">Home</a>
-<a class="text-on-surface-variant font-medium hover:text-primary-container transition-colors duration-200 font-label-sm text-label-sm" href="bridal.html">collections</a>
- 
-<a class="text-on-surface-variant font-medium hover:text-primary-container transition-colors duration-200 font-label-sm text-label-sm" href="contactus.html">Contact Us</a>
-</nav>
-<!-- Actions -->
-<div class="flex items-center gap-6">
- 
-<div class="flex gap-4 items-center">
- 
-</div>
-</div>
-</div>
-</header>
-<main class="mt-20">
-<!-- Hero Section -->
-<section class="relative w-full h-[85vh] flex items-center overflow-hidden bg-surface-container-low">
-<div class="absolute inset-0 z-0">
-<img alt="Yas Mehandi  Hero" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvTIxkDjWsG62hyPUzqrsEPsjs1tq3bLt6rz-63WWopCBW3eGD443ywj1L3F99iV1ygBjO9iCIHFFUXX1TXzLIW0DyqMTEV3ydgiMYmA2l8-1JwMW3BrQOMvkKYaZzO_5LV9K2iMor-IEdxDXRw13kcCwc6n8Sgqu2_BgxyWY0LRMALzzv5ai_K2_v3fw6C1pitonEiYzgcXRcQs06nJD69V1d-mhzYEkNxZsvwgkRL392sCngZUfqQQ"/>
-</div>
-<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full"></div>
-<!-- Decorative mandala element -->
-</section>
-<!-- Shop by Collection -->
-<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-<div class="flex justify-between items-end mb-12">
-<div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Shop by Collection</h2>
-<p class="text-on-surface-variant mt-2 font-body-md">Hand-picked designs for every tradition.</p>
-</div>
-<a class="text-primary font-label-sm text-label-sm hover:underline flex items-center gap-2" href="#">
+            
+            <!-- Navigation Links (Desktop) -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-sm text-label-sm" href="index.html">Home</a>
+                <a class="text-on-surface-variant font-medium hover:text-primary-container transition-colors duration-200 font-label-sm text-label-sm" href="bridal.html">Collections</a>
+                <a class="text-on-surface-variant font-medium hover:text-primary-container transition-colors duration-200 font-label-sm text-label-sm" href="contactus.html">Contact Us</a>
+            </nav>
+            
+            <!-- Actions / Hamburger Icon (Mobile) -->
+            <div class="flex items-center gap-6">
+                <div class="flex gap-4 items-center">
+                    <button id="mobile-menu-btn" class="lg:hidden text-primary p-1 focus:outline-none flex items-center justify-center">
+                        <span class="material-symbols-outlined text-3xl transition-transform duration-300">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="fixed inset-0 bg-surface z-40 pt-24 px-8 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col">
+            <nav class="flex flex-col gap-6 mt-8">
+                <a class="text-primary font-title-md text-2xl border-b-2 border-outline-variant pb-4" href="index.html">Home</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-md text-2xl border-b-2 border-outline-variant pb-4" href="bridal.html">Collections</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-md text-2xl border-b-2 border-outline-variant pb-4" href="contactus.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="mt-20">
+        <!-- Hero Section -->
+        <section class="relative w-full h-[85vh] flex items-center overflow-hidden bg-surface-container-low">
+            <div class="absolute inset-0 z-0">
+                <img alt="Yas Mehandi  Hero" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvTIxkDjWsG62hyPUzqrsEPsjs1tq3bLt6rz-63WWopCBW3eGD443ywj1L3F99iV1ygBjO9iCIHFFUXX1TXzLIW0DyqMTEV3ydgiMYmA2l8-1JwMW3BrQOMvkKYaZzO_5LV9K2iMor-IEdxDXRw13kcCwc6n8Sgqu2_BgxyWY0LRMALzzv5ai_K2_v3fw6C1pitonEiYzgcXRcQs06nJD69V1d-mhzYEkNxZsvwgkRL392sCngZUfqQQ" />
+            </div>
+            <div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full"></div>
+            <!-- Decorative mandala element -->
+        </section>
+        
+        <!-- Shop by Collection -->
+        <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface">Shop by Collection</h2>
+                    <p class="text-on-surface-variant mt-2 font-body-md">Hand-picked designs for every tradition.</p>
+                </div>
+                <a class="text-primary font-label-sm text-label-sm hover:underline flex items-center gap-2" href="#">
                     View All Collections <span class="material-symbols-outlined">arrow_right_alt</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<!-- Collection 1 -->
-<div class="group cursor-pointer">
-<div class="relative overflow-hidden aspect-[3/4] rounded-lg mb-4 border border-outline-variant group-hover:border-primary transition-colors">
-<img alt="Semibridal Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLvWtNr3SkeI9JLNmEOm4yQrTMkWRRu_l7UYhyuONEqDHUZPsEZY5wgAz1TEzWVAu9DUsk6fjaK1Q6QHkGRzFEgxPuJmsuZ831ixSsrPccxEN-BojrNyfAVDTFv6kyfH-aYMGXloTIPUM3IQQtFqRIpx6aS0ofFxJW4QtjGmQz_V0xWVNV64lKR5XJRN_Opf9EJdNxJw5OruUQU1nGrgZvLOK5ZidQEdOs7KExhLJcJ388frw-HIdRghZ0BM"/>
-<div class="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/20 transition-all"></div>
-</div>
-<h3 class="font-headline-lg text-xl text-center group-hover:text-primary transition-colors">Semibridal</h3>
-</div>
-<!-- Collection 2 -->
-<div class="group cursor-pointer">
-<div class="relative overflow-hidden aspect-[3/4] rounded-lg mb-4 border border-outline-variant group-hover:border-primary transition-colors">
-<img alt="Bridal Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLuscIvS0Jt_PfKAWxQSLvL34Nu8QpLTxwh5nHWz-8wWVCZ0NQRcDkj2xS1d5yp7QpSiubgmoXi5gVCGue2cspHnJaoRJaA7Wy7x3nzOaxa9o5aC4Q-vsXNQIoc9p-Dvhphwc247ElQQwMZSSi3a-i6JiR5VTetJ_tgcj6cRokkYRifOHSdMgDNs6N0kY_M9ca0AH1LQTcFLSyobbeK87-RCYPgOggX_9OaiNeJhkGEkF2zkjrOtrsSOMx0"/>
-<div class="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/20 transition-all"></div>
-</div>
-<h3 class="font-headline-lg text-xl text-center group-hover:text-primary transition-colors">Bridal</h3>
-</div>
-<!-- Collection 3 -->
-<div class="group cursor-pointer">
-<div class="relative overflow-hidden aspect-[3/4] rounded-lg mb-4 border border-outline-variant group-hover:border-primary transition-colors">
-<img alt="Kids Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLtQtI5mfNG1NdWPkBNwyYlCA55QOAe7tkqWJJ8eWPuC9ym0zz3LQtM3Hii9azdnmuP9JNtO0wRwlxr_WAF9Eo6Pu2cYRryAsbvW3ds4qwT1b3J1EblRC_odkftMQuNPewYuNlatQV88pQy5zAIpeZEzXQHXgsZ7Do2kT8n4tC9Q9nGH4mpbNSA1aZO4XHRZu09WcKmTNn0UoQvFXSusfmifVMfqWUHlttaygSizUISQozjgukDHEp8sxhw"/>
-<div class="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/20 transition-all"></div>
-</div>
-<h3 class="font-headline-lg text-xl text-center group-hover:text-primary transition-colors">Kids</h3>
-</div>
-<!-- Collection 4 -->
-<div class="group cursor-pointer">
-<div class="relative overflow-hidden aspect-[3/4] rounded-lg mb-4 border border-outline-variant group-hover:border-primary transition-colors">
-<img alt="Heritage Watches Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLtrUTxbiQ-1CjQKlvrsU3B0yXZ9ZEQCXZPHOnZqFaXmtrvFkaOL4rs8A32RUx6XAkoMF01607Z24PeQUSxeNh0tmpXxwBa2yvP7mlV3Wu4M4WPo8Obpwyihn2wpZguFchaNa0TfCL9JlYGvFxqwPJtEP8fQS4XnOyEG5ElodPItdZ0SaGyboQ_enOIXu3K-IhzV7icW49nRBCXqGC9MROkwH-sYca1KGKNK8iGFqcPaev_ntR2aM4AKOh1e"/>
-<div class="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/20 transition-all"></div>
-</div>
-<h3 class="font-headline-lg text-xl text-center group-hover:text-primary transition-colors">Heritage watches</h3>
-</div>
-</div>
-</section>
-<!-- New Arrivals Carousel -->
-<section class="py-section-gap bg-surface-container-low border-y border-outline-variant">
-<div class="px-margin-desktop max-w-container-max mx-auto overflow-hidden">
-<div class="flex items-center justify-between mb-10">
-<h2 class="font-headline-lg text-headline-lg text-on-surface">New Arrivals</h2>
-<div class="flex gap-2">
-<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" onclick="scrollCarousel(-1)">
-<span class="material-symbols-outlined">chevron_left</span>
-</button>
-<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" onclick="scrollCarousel(1)">
-<span class="material-symbols-outlined">chevron_right</span>
-</button>
-</div>
-</div>
-<div class="flex gap-gutter carousel-container overflow-x-auto pb-8 -mx-margin-desktop px-margin-desktop" id="arrivals-carousel">
-<!-- Carousel Items -->
-<div class="carousel-item flex-none w-72 group">
-<div class="relative aspect-square rounded-lg overflow-hidden bg-white mb-4 border border-outline-variant group-hover:border-primary">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of a complex circular henna stencil design on a hand, featuring intricate floral and mandala details. The lighting is soft and warm, highlighting the precision of the cutouts. Style is high-end product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUV_jn9rWnqKF4CF7oJWfdrJYuiYasW11Gvq1wEGpwwG9gl5MWpyBoUFBAoOe3wYl_F-k1S18U4tfuk-bbaGoSNK_b6vULX5i7u-Vp25WFI3iPtF9hoYYJnMkMAuUXTda2U4NKjMN1qRcNUvCxJamQPNgvsTQ8Zo4c4171fhMZBqHRj8t4jt_IWGhSedYIs9-tx13BMtBwSLx5-Jw8EPgZgPKo4hB-NYuIm9LwiVfcSU3Rtea3gVykPA"/>
-<button class="absolute bottom-4 left-4 right-4 bg-white/90 text-primary py-2 rounded font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">Quick Add</button>
-</div>
-<p class="font-label-sm text-label-sm text-primary uppercase mb-1">Occasion Wear</p>
-<h4 class="font-title-md text-on-surface mb-2">Mandala Bloom Stencil</h4>
-<p class="text-primary font-bold">₹499</p>
-</div>
-<div class="carousel-item flex-none w-72 group">
-<div class="relative aspect-square rounded-lg overflow-hidden bg-white mb-4 border border-outline-variant group-hover:border-primary">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A delicate vine henna stencil pattern wrapped around a wrist, showcasing fine lines and elegant curves. The background is a soft-focus festive Indian wedding setting with marigold flowers. Lighting is vibrant and celebratory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_iojtXiHC8vOBS2L0df6_MUiQZxlurrezdW54QVS3Z536Hz9TikcuocZXelX5qvtIgnim8H0pFwzPgBBf9N4v6w-KQtUr3S0b-uJADr_ehoYTN3_hAH7MnZT1QOMYjhGgKFL77WeCf7HbFBrmkGvLl_34Cv2FPKIaKTgSOdnXAhW_BSk0wtLxV5rkVYsL1qblX5MM0G-aJE61hlTfK__g-IHJvA8x9aTTpigAmU4hHMsnFx7baGsqOA"/>
-<button class="absolute bottom-4 left-4 right-4 bg-white/90 text-primary py-2 rounded font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">Quick Add</button>
-</div>
-<p class="font-label-sm text-label-sm text-primary uppercase mb-1">Bridal Essence</p>
-<h4 class="font-title-md text-on-surface mb-2">Wrist Ivy Pattern</h4>
-<p class="text-primary font-bold">₹350</p>
-</div>
-<div class="carousel-item flex-none w-72 group">
-<div class="relative aspect-square rounded-lg overflow-hidden bg-white mb-4 border border-outline-variant group-hover:border-primary">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional paisley and peacock motif henna stencil applied to a palm. The design is rich and dense, perfect for festive occasions. The image has a warm, inviting tone with subtle gold sparkles in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvLTTAgr2hqAbQmiCduIlwP_auGQ1JnWV336Gg9dAl927fT9g3KrLpPCToWkKZWAL71w7IFV1rU6tQMPCcnyFfl0As4dGABEHeZtyDPU5EYMmp50tJKCLeqgbrzVJJUxmqYfiO8ApvFjRgbsNq2vB2JbN7xI3JwgVTyCYR3af7CqABIcb7UfI3j5D5YF1A7mJTXfhRUVaAPnvpXNZMNRjhhxYd5dVrLhF5GZBfmbTZ_SRuxfDXwvbEbQ"/>
-<button class="absolute bottom-4 left-4 right-4 bg-white/90 text-primary py-2 rounded font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">Quick Add</button>
-</div>
-<p class="font-label-sm text-label-sm text-primary uppercase mb-1">Heritage Collection</p>
-<h4 class="font-title-md text-on-surface mb-2">Royal Paisley Palm</h4>
-<p class="text-primary font-bold">₹620</p>
-</div>
-<div class="carousel-item flex-none w-72 group">
-<div class="relative aspect-square rounded-lg overflow-hidden bg-white mb-4 border border-outline-variant group-hover:border-primary">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern minimalist henna stencil for fingers, featuring geometric lines and dots. Clean, contemporary aesthetic against a neutral sand-colored background. Lighting is bright and airy, reflecting a modern-traditional fusion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2V20Xd0ymWo-JRXXYOJrFF_cWbaNcYCQrPlTwYBCcMp3HWh2NyPspXiMZn36pg2N9rrvcUMuFfmedWWDsCPOe64vZGj7stU_E6J_OH1QsI7ravN-t-uvVajo0J64yVD9ypcL2xdruH12PsW6b1Pk1-NrPX7aAY3HQzTQiRRJjU1_zJvya4P8gbBg0CcR4TrqikeIHVJYmOjGp9ij-BMTz07_yJfjTGoDMUF8mR5kfnIuwgdz3e9UVrQ"/>
-<button class="absolute bottom-4 left-4 right-4 bg-white/90 text-primary py-2 rounded font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">Quick Add</button>
-</div>
-<p class="font-label-sm text-label-sm text-primary uppercase mb-1">Modern Minimal</p>
-<h4 class="font-title-md text-on-surface mb-2">Geometric Finger Set</h4>
-<p class="text-primary font-bold">₹299</p>
-</div>
-<div class="carousel-item flex-none w-72 group">
-<div class="relative aspect-square rounded-lg overflow-hidden bg-white mb-4 border border-outline-variant group-hover:border-primary">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Large-scale back-of-hand henna stencil with a sunburst mandala center and delicate chain patterns connecting to the fingers. The image captures a serene, high-end bridal preparation moment with soft linen textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD5_cUCZgS3oblkdcInPDQ1iEiyGcYX8isBe7yXFjaEw867VnISFuLB6Utvst8SqyAjaMmecbq-zkKFbVUE61mbBSzrW0qqN-cMGnEvsonJWjj7nBi1Kr_JqIfTaOQmZq3a-c5aovbP2HWd3-7d5aDVOmKD5K40MBFUzqIK-YJjj9k7BECRjUk-l2yJDoAtdC3ft4cYEwgPOkfCuhISWmyKfCGBi8v5JxIRHXoqimve3WIdweP3dHrqA"/>
-<button class="absolute bottom-4 left-4 right-4 bg-white/90 text-primary py-2 rounded font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">Quick Add</button>
-</div>
-<p class="font-label-sm text-label-sm text-primary uppercase mb-1">Celebration Special</p>
-<h4 class="font-title-md text-on-surface mb-2">Sunburst Glow Stencil</h4>
-<p class="text-primary font-bold">₹750</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Newsletter / Promo -->
-<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto text-center relative overflow-hidden">
-<div class="absolute inset-0 z-0 opacity-5 pointer-events-none hero-pattern"></div>
-<div class="relative z-10 max-w-2xl mx-auto">
-<span class="material-symbols-outlined text-primary text-5xl mb-6" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Never Miss a Festive Update</h2>
-<p class="text-on-surface-variant font-body-md mb-8">Subscribe to our newsletter and be the first to know about our seasonal collections and exclusive henna art tutorials.</p>
-<form class="flex flex-col sm:flex-row gap-4 justify-center">
-<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary-container transition-all">
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                <!-- Collection 1 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden aspect-[3/4] rounded-lg mb-4 border border-outline-variant group-hover:border-primary transition-colors">
+                        <img alt="Semibridal Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLvWtNr3SkeI9JLNmEOm4yQrTMkWRRu_l7UYhyuONEqDHUZPsEZY5wgAz1TEzWVAu9DUsk6fjaK1Q6QHkGRzFEgxPuJmsuZ831ixSsrPccxEN-BojrNyfAVDTFv6kyfH-aYMGXloTIPUM3IQQtFqRIpx6aS0ofFxJW4QtjGmQz_V0xWVNV64lKR5XJRN_Opf9EJdNxJw5OruUQU1nGrgZvLOK5ZidQEdOs7KExhLJcJ388frw-HIdRghZ0BM" />
+                        <div class="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/20 transition-all"></div>
+                    </div>
+                    <h3 class="font-headline-lg text-xl text-center group-hover:text-primary transition-colors">Semibridal</h3>
+                </div>
+                <!-- Collection 2 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden aspect-[3/4] rounded-lg mb-4 border border-outline-variant group-hover:border-primary transition-colors">
+                        <img alt="Bridal Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLuscIvS0Jt_PfKAWxQSLvL34Nu8QpLTxwh5nHWz-8wWVCZ0NQRcDkj2xS1d5yp7QpSiubgmoXi5gVCGue2cspHnJaoRJaA7Wy7x3nzOaxa9o5aC4Q-vsXNQIoc9p-Dvhphwc247ElQQwMZSSi3a-i6JiR5VTetJ_tgcj6cRokkYRifOHSdMgDNs6N0kY_M9ca0AH1LQTcFLSyobbeK87-RCYPgOggX_9OaiNeJhkGEkF2zkjrOtrsSOMx0" />
+                        <div class="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/20 transition-all"></div>
+                    </div>
+                    <h3 class="font-headline-lg text-xl text-center group-hover:text-primary transition-colors">Bridal</h3>
+                </div>
+                <!-- Collection 3 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden aspect-[3/4] rounded-lg mb-4 border border-outline-variant group-hover:border-primary transition-colors">
+                        <img alt="Kids Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLtQtI5mfNG1NdWPkBNwyYlCA55QOAe7tkqWJJ8eWPuC9ym0zz3LQtM3Hii9azdnmuP9JNtO0wRwlxr_WAF9Eo6Pu2cYRryAsbvW3ds4qwT1b3J1EblRC_odkftMQuNPewYuNlatQV88pQy5zAIpeZEzXQHXgsZ7Do2kT8n4tC9Q9nGH4mpbNSA1aZO4XHRZu09WcKmTNn0UoQvFXSusfmifVMfqWUHlttaygSizUISQozjgukDHEp8sxhw" />
+                        <div class="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/20 transition-all"></div>
+                    </div>
+                    <h3 class="font-headline-lg text-xl text-center group-hover:text-primary transition-colors">Kids</h3>
+                </div>
+                <!-- Collection 4 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden aspect-[3/4] rounded-lg mb-4 border border-outline-variant group-hover:border-primary transition-colors">
+                        <img alt="Heritage Watches Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLtrUTxbiQ-1CjQKlvrsU3B0yXZ9ZEQCXZPHOnZqFaXmtrvFkaOL4rs8A32RUx6XAkoMF01607Z24PeQUSxeNh0tmpXxwBa2yvP7mlV3Wu4M4WPo8Obpwyihn2wpZguFchaNa0TfCL9JlYGvFxqwPJtEP8fQS4XnOyEG5ElodPItdZ0SaGyboQ_enOIXu3K-IhzV7icW49nRBCXqGC9MROkwH-sYca1KGKNK8iGFqcPaev_ntR2aM4AKOh1e" />
+                        <div class="absolute inset-0 bg-on-surface/0 group-hover:bg-on-surface/20 transition-all"></div>
+                    </div>
+                    <h3 class="font-headline-lg text-xl text-center group-hover:text-primary transition-colors">Heritage watches</h3>
+                </div>
+            </div>
+        </section>
+        
+        <!-- New Arrivals Carousel -->
+        <section class="py-section-gap bg-surface-container-low border-y border-outline-variant">
+            <div class="px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+                <div class="flex items-center justify-between mb-10">
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface">New Arrivals</h2>
+                    <div class="flex gap-2">
+                        <button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" onclick="scrollCarousel(-1)">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" onclick="scrollCarousel(1)">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex gap-gutter carousel-container overflow-x-auto pb-8 -mx-margin-desktop px-margin-desktop" id="arrivals-carousel">
+                    <!-- Carousel Items -->
+                    <div class="carousel-item flex-none w-72 group">
+                        <div class="relative aspect-square rounded-lg overflow-hidden bg-white mb-4 border border-outline-variant group-hover:border-primary">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of a complex circular henna stencil design on a hand..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUV_jn9rWnqKF4CF7oJWfdrJYuiYasW11Gvq1wEGpwwG9gl5MWpyBoUFBAoOe3wYl_F-k1S18U4tfuk-bbaGoSNK_b6vULX5i7u-Vp25WFI3iPtF9hoYYJnMkMAuUXTda2U4NKjMN1qRcNUvCxJamQPNgvsTQ8Zo4c4171fhMZBqHRj8t4jt_IWGhSedYIs9-tx13BMtBwSLx5-Jw8EPgZgPKo4hB-NYuIm9LwiVfcSU3Rtea3gVykPA" />
+                            <button class="absolute bottom-4 left-4 right-4 bg-white/90 text-primary py-2 rounded font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">Quick Add</button>
+                        </div>
+                        <p class="font-label-sm text-label-sm text-primary uppercase mb-1">Occasion Wear</p>
+                        <h4 class="font-title-md text-on-surface mb-2">Mandala Bloom Stencil</h4>
+                        <p class="text-primary font-bold">₹499</p>
+                    </div>
+                    <div class="carousel-item flex-none w-72 group">
+                        <div class="relative aspect-square rounded-lg overflow-hidden bg-white mb-4 border border-outline-variant group-hover:border-primary">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A delicate vine henna stencil pattern wrapped around a wrist..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_iojtXiHC8vOBS2L0df6_MUiQZxlurrezdW54QVS3Z536Hz9TikcuocZXelX5qvtIgnim8H0pFwzPgBBf9N4v6w-KQtUr3S0b-uJADr_ehoYTN3_hAH7MnZT1QOMYjhGgKFL77WeCf7HbFBrmkGvLl_34Cv2FPKIaKTgSOdnXAhW_BSk0wtLxV5rkVYsL1qblX5MM0G-aJE61hlTfK__g-IHJvA8x9aTTpigAmU4hHMsnFx7baGsqOA" />
+                            <button class="absolute bottom-4 left-4 right-4 bg-white/90 text-primary py-2 rounded font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">Quick Add</button>
+                        </div>
+                        <p class="font-label-sm text-label-sm text-primary uppercase mb-1">Bridal Essence</p>
+                        <h4 class="font-title-md text-on-surface mb-2">Wrist Ivy Pattern</h4>
+                        <p class="text-primary font-bold">₹350</p>
+                    </div>
+                    <div class="carousel-item flex-none w-72 group">
+                        <div class="relative aspect-square rounded-lg overflow-hidden bg-white mb-4 border border-outline-variant group-hover:border-primary">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional paisley and peacock motif henna stencil applied to a palm..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvLTTAgr2hqAbQmiCduIlwP_auGQ1JnWV336Gg9dAl927fT9g3KrLpPCToWkKZWAL71w7IFV1rU6tQMPCcnyFfl0As4dGABEHeZtyDPU5EYMmp50tJKCLeqgbrzVJJUxmqYfiO8ApvFjRgbsNq2vB2JbN7xI3JwgVTyCYR3af7CqABIcb7UfI3j5D5YF1A7mJTXfhRUVaAPnvpXNZMNRjhhxYd5dVrLhF5GZBfmbTZ_SRuxfDXwvbEbQ" />
+                            <button class="absolute bottom-4 left-4 right-4 bg-white/90 text-primary py-2 rounded font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">Quick Add</button>
+                        </div>
+                        <p class="font-label-sm text-label-sm text-primary uppercase mb-1">Heritage Collection</p>
+                        <h4 class="font-title-md text-on-surface mb-2">Royal Paisley Palm</h4>
+                        <p class="text-primary font-bold">₹620</p>
+                    </div>
+                    <div class="carousel-item flex-none w-72 group">
+                        <div class="relative aspect-square rounded-lg overflow-hidden bg-white mb-4 border border-outline-variant group-hover:border-primary">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern minimalist henna stencil for fingers..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2V20Xd0ymWo-JRXXYOJrFF_cWbaNcYCQrPlTwYBCcMp3HWh2NyPspXiMZn36pg2N9rrvcUMuFfmedWWDsCPOe64vZGj7stU_E6J_OH1QsI7ravN-t-uvVajo0J64yVD9ypcL2xdruH12PsW6b1Pk1-NrPX7aAY3HQzTQiRRJjU1_zJvya4P8gbBg0CcR4TrqikeIHVJYmOjGp9ij-BMTz07_yJfjTGoDMUF8mR5kfnIuwgdz3e9UVrQ" />
+                            <button class="absolute bottom-4 left-4 right-4 bg-white/90 text-primary py-2 rounded font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">Quick Add</button>
+                        </div>
+                        <p class="font-label-sm text-label-sm text-primary uppercase mb-1">Modern Minimal</p>
+                        <h4 class="font-title-md text-on-surface mb-2">Geometric Finger Set</h4>
+                        <p class="text-primary font-bold">₹299</p>
+                    </div>
+                    <div class="carousel-item flex-none w-72 group">
+                        <div class="relative aspect-square rounded-lg overflow-hidden bg-white mb-4 border border-outline-variant group-hover:border-primary">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Large-scale back-of-hand henna stencil with a sunburst mandala center..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD5_cUCZgS3oblkdcInPDQ1iEiyGcYX8isBe7yXFjaEw867VnISFuLB6Utvst8SqyAjaMmecbq-zkKFbVUE61mbBSzrW0qqN-cMGnEvsonJWjj7nBi1Kr_JqIfTaOQmZq3a-c5aovbP2HWd3-7d5aDVOmKD5K40MBFUzqIK-YJjj9k7BECRjUk-l2yJDoAtdC3ft4cYEwgPOkfCuhISWmyKfCGBi8v5JxIRHXoqimve3WIdweP3dHrqA" />
+                            <button class="absolute bottom-4 left-4 right-4 bg-white/90 text-primary py-2 rounded font-label-sm text-label-sm opacity-0 group-hover:opacity-100 transition-opacity">Quick Add</button>
+                        </div>
+                        <p class="font-label-sm text-label-sm text-primary uppercase mb-1">Celebration Special</p>
+                        <h4 class="font-title-md text-on-surface mb-2">Sunburst Glow Stencil</h4>
+                        <p class="text-primary font-bold">₹750</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter / Promo -->
+        <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto text-center relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-5 pointer-events-none hero-pattern"></div>
+            <div class="relative z-10 max-w-2xl mx-auto">
+                <span class="material-symbols-outlined text-primary text-5xl mb-6" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Never Miss a Festive Update</h2>
+                <p class="text-on-surface-variant font-body-md mb-8">Subscribe to our newsletter and be the first to know about our seasonal collections and exclusive henna art tutorials.</p>
+                <form class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary-container transition-all">
                         Join The Family
                     </button>
-</form>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
-<!-- Brand Column -->
-<div class="col-span-1">
-<div class="font-title-md text-title-md font-bold text-on-surface mb-6">Yas Mehandis</div>
-<p class="text-on-surface-variant font-body-md mb-6 leading-relaxed">
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+            <!-- Brand Column -->
+            <div class="col-span-1">
+                <div class="font-title-md text-title-md font-bold text-on-surface mb-6">Yas Mehandis</div>
+                <p class="text-on-surface-variant font-body-md mb-6 leading-relaxed">
                     Celebrating the ancient art of henna through modern, accessible designs. Quality stencils for your most precious moments.
                 </p>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-all">share</span>
-<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-all">contact_mail</span>
-<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-all">location_on</span>
-</div>
-</div>
-<!-- Shop Links -->
-<div class="col-span-1">
-<h4 class="font-label-sm text-label-sm text-primary uppercase mb-6">Collections</h4>
-<ul class="space-y-4">
-<li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">About Us</a></li>
-<li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Contact Us</a></li>
-<li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Shipping Policy</a></li>
-<li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">FAQs</a></li>
-</ul>
-</div>
-<!-- Policies -->
-<div class="col-span-1">
-<h4 class="font-label-sm text-label-sm text-primary uppercase mb-6">Support</h4>
-<ul class="space-y-4">
-<li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Terms of Service</a></li>
-<li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Privacy Policy</a></li>
-<li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Refund Policy</a></li>
-<li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Affiliate Program</a></li>
-</ul>
-</div>
-<!-- Copyright -->
-<div class="col-span-1">
-<h4 class="font-label-sm text-label-sm text-primary uppercase mb-6">Location</h4>
-<p class="text-on-surface-variant font-body-md mb-4 italic">
-Location: Rayanur , Karur.<br>
-Contact  No:+91 93616 46027
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-all">share</span>
+                    <span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-all">contact_mail</span>
+                    <span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-all">location_on</span>
+                </div>
+            </div>
+            <!-- Shop Links -->
+            <div class="col-span-1">
+                <h4 class="font-label-sm text-label-sm text-primary uppercase mb-6">Collections</h4>
+                <ul class="space-y-4">
+                    <li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">About Us</a></li>
+                    <li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Contact Us</a></li>
+                    <li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Shipping Policy</a></li>
+                    <li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <!-- Policies -->
+            <div class="col-span-1">
+                <h4 class="font-label-sm text-label-sm text-primary uppercase mb-6">Support</h4>
+                <ul class="space-y-4">
+                    <li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Terms of Service</a></li>
+                    <li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Privacy Policy</a></li>
+                    <li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Refund Policy</a></li>
+                    <li class=""><a class="text-on-surface-variant font-body-md hover:text-primary transition-all" href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+            <!-- Copyright -->
+            <div class="col-span-1">
+                <h4 class="font-label-sm text-label-sm text-primary uppercase mb-6">Location</h4>
+                <p class="text-on-surface-variant font-body-md mb-4 italic">
+                    Location: Rayanur , Karur.<br>
+                    Contact  No:+91 93616 46027
                 </p>
-<div class="mt-8 pt-8 border-t border-outline-variant/30">
-<p class="text-on-surface-variant font-label-sm text-label-sm">
+                <div class="mt-8 pt-8 border-t border-outline-variant/30">
+                    <p class="text-on-surface-variant font-label-sm text-label-sm">
                         © 2026 Yas Mehandis Store. Celebrating Henna Artistry.
                     </p>
-</div>
-</div>
-</div>
-<a href="https://wa.me/919361646027?text=Hi!%20I%20have%20a%20question." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 32 32" class="whatsapp-icon">
-    <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.48 2.025 7.793l-2.025 7.407 7.579-1.99c2.352 1.22 5.033 1.91 7.881 1.91 8.837 0 16-7.163 16-16s-7.163-16-16-16zm8.687 22.848c-.36 1.012-1.787 1.944-2.484 2.029-.63.076-1.429.135-4.18-1.002-3.515-1.454-5.768-5.029-5.942-5.26-.174-.233-1.411-1.876-1.411-3.58 0-1.703.891-2.54 1.208-2.887.316-.346.693-.433.923-.433.23 0 .461.002.663.01.209.009.49-.079.768.591.288.693.979 2.392 1.065 2.569.087.177.144.382.029.613-.115.23-.174.374-.346.576-.172.202-.362.45-.519.604-.173.17-.355.355-.153.7.202.344.899 1.48 1.93 2.4 1.33 1.187 2.454 1.556 2.801 1.729.346.173.548.144.75-.087.202-.23.864-.99.1095-1.335.23-.105.46-.057.693.029.23.087 1.469.693 1.72 1.817.252.124.252.365.136.654z"/>
-  </svg>
-</a>
-</footer>
-<script>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/919361646027?text=Hi!%20I%20have%20a%20question." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+            <svg viewBox="0 0 32 32" class="whatsapp-icon">
+                <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.48 2.025 7.793l-2.025 7.407 7.579-1.99c2.352 1.22 5.033 1.91 7.881 1.91 8.837 0 16-7.163 16-16s-7.163-16-16-16zm8.687 22.848c-.36 1.012-1.787 1.944-2.484 2.029-.63.076-1.429.135-4.18-1.002-3.515-1.454-5.768-5.029-5.942-5.26-.174-.233-1.411-1.876-1.411-3.58 0-1.703.891-2.54 1.208-2.887.316-.346.693-.433.923-.433.23 0 .461.002.663.01.209.009.49-.079.768.591.288.693.979 2.392 1.065 2.569.087.177.144.382.029.613-.115.23-.174.374-.346.576-.172.202-.362.45-.519.604-.173.17-.355.355-.153.7.202.344.899 1.48 1.93 2.4 1.33 1.187 2.454 1.556 2.801 1.729.346.173.548.144.75-.087.202-.23.864-.99.1095-1.335.23-.105.46-.057.693.029.23.087 1.469.693 1.72 1.817.252.124.252.365.136.654z"/>
+            </svg>
+        </a>
+    </footer>
+
+    <script>
+        // Carousel Script
         function scrollCarousel(direction) {
             const container = document.getElementById('arrivals-carousel');
             const scrollAmount = 300;
@@ -398,11 +424,14 @@ Contact  No:+91 93616 46027
             });
         }
 
-        // Simple scroll reveal for header
+        // Header Scroll Animation
         let lastScroll = 0;
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             const currentScroll = window.pageYOffset;
+
+            // Don't trigger if mobile menu is open
+            if(isMenuOpen) return;
 
             if (currentScroll <= 0) {
                 header.classList.remove('shadow-sm');
@@ -420,5 +449,24 @@ Contact  No:+91 93616 46027
             lastScroll = currentScroll;
             header.style.transition = 'transform 0.3s ease-in-out';
         });
+
+        // Mobile Menu Toggle Script
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = mobileMenuBtn.querySelector('span');
+        let isMenuOpen = false;
+
+        mobileMenuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('translate-x-full');
+                menuIcon.textContent = 'close';
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+                menuIcon.textContent = 'menu';
+            }
+        });
     </script>
-</body></html>
+</body>
+</html>

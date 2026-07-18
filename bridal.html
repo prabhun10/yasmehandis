@@ -136,9 +136,22 @@
 <a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-sm text-label-sm" href="bridal.html">Collections</a>
 <a class="text-on-surface-variant font-medium hover:text-primary-container transition-colors duration-200 font-label-sm text-label-sm" href="contactus.html">Contactus</a>
 </nav>
-<div class="flex items-center space-x-6">
+
+ <div class="flex items-center gap-6">
+                <div class="flex gap-4 items-center">
+                    <button id="mobile-menu-btn" class="lg:hidden text-primary p-1 focus:outline-none flex items-center justify-center">
+                        <span class="material-symbols-outlined text-3xl transition-transform duration-300">menu</span>
+                    </button>
+                </div>
+            </div>
+			 <div id="mobile-menu" class="fixed inset-0 bg-surface z-40 pt-24 px-8 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col">
+            <nav class="flex flex-col gap-6 mt-8">
+                <a class="text-primary font-title-md text-2xl border-b-2 border-outline-variant pb-4" href="index.html">Home</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-md text-2xl border-b-2 border-outline-variant pb-4" href="bridal.html">Collections</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-md text-2xl border-b-2 border-outline-variant pb-4" href="contactus.html">Contact Us</a>
+            </nav>
+        </div>
  
-</div>
 </div>
 </header>
 <!-- Hero / Category Header -->
@@ -317,25 +330,23 @@ Contact  No:+91 93616 46027</span>
 </footer>
 <!-- Scripts for Interactions -->
 <script>
-    // Simple micro-interaction for filter highlighting
-    document.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach(input => {
-      input.addEventListener('change', (e) => {
-        const span = e.target.nextElementSibling;
-        if (e.target.checked) {
-          span.classList.add('text-primary', 'font-bold');
-        } else {
-          span.classList.remove('text-primary', 'font-bold');
-        }
-      });
-    });
+     // Mobile Menu Toggle Script
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = mobileMenuBtn.querySelector('span');
+    let isMenuOpen = false;
 
-    // Expand search bar on focus
-    const searchInput = document.querySelector('input[type="text"]');
-    searchInput.addEventListener('focus', () => {
-      searchInput.classList.add('border-primary');
+    mobileMenuBtn.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        
+        if (isMenuOpen) {
+            mobileMenu.classList.remove('translate-x-full');
+            menuIcon.textContent = 'close';
+        } else {
+            mobileMenu.classList.add('translate-x-full');
+            menuIcon.textContent = 'menu';
+        }
     });
-    searchInput.addEventListener('blur', () => {
-      if(!searchInput.value) searchInput.classList.remove('border-primary');
-    });
+	 
   </script>
 </body></html>

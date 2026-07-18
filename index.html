@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth" style="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Manrope:wght@400;600;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+    try{
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "on-secondary-container": "#ff96b0",
+                            "on-surface": "#e7e1dd",
+                            "on-error-container": "#ffdad6",
+                            "primary-fixed-dim": "#e9c349",
+                            "tertiary": "#e1cac1",
+                            "surface-container-highest": "#373431",
+                            "secondary-fixed-dim": "#ffb1c3",
+                            "on-primary-container": "#554300",
+                            "secondary": "#ffb1c3",
+                            "tertiary-fixed-dim": "#d8c2b9",
+                            "primary": "#f2ca50",
+                            "on-secondary-fixed-variant": "#861b42",
+                            "on-secondary": "#66002c",
+                            "on-tertiary-fixed": "#251913",
+                            "error-container": "#93000a",
+                            "primary-container": "#d4af37",
+                            "surface-bright": "#3b3936",
+                            "surface-container-high": "#2c2a27",
+                            "outline-variant": "#4d4635",
+                            "on-background": "#e7e1dd",
+                            "primary-fixed": "#ffe088",
+                            "surface": "#151311",
+                            "secondary-fixed": "#ffd9e0",
+                            "on-error": "#690005",
+                            "on-surface-variant": "#d0c5af",
+                            "surface-container-low": "#1d1b19",
+                            "on-tertiary": "#3b2d27",
+                            "surface-container-lowest": "#0f0e0b",
+                            "background": "#151311",
+                            "on-primary-fixed-variant": "#574500",
+                            "on-tertiary-fixed-variant": "#53433d",
+                            "surface-container": "#211f1d",
+                            "error": "#ffb4ab",
+                            "on-primary": "#3c2f00",
+                            "inverse-surface": "#e7e1dd",
+                            "on-primary-fixed": "#241a00",
+                            "secondary-container": "#861b42",
+                            "surface-tint": "#e9c349",
+                            "inverse-primary": "#735c00",
+                            "surface-dim": "#151311",
+                            "tertiary-container": "#c4afa6",
+                            "on-tertiary-container": "#51423b",
+                            "on-secondary-fixed": "#3f0019",
+                            "outline": "#99907c",
+                            "surface-variant": "#373431",
+                            "tertiary-fixed": "#f5ded5",
+                            "inverse-on-surface": "#32302d",
+                            "henna-deep": "#1a0f0a"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                        },
+                        "spacing": {
+                            "stack-lg": "32px",
+                            "stack-md": "16px",
+                            "stack-sm": "8px",
+                            "margin-mobile": "16px",
+                            "section-gap": "80px",
+                            "container-max": "1280px",
+                            "gutter": "24px"
+                        },
+                        "fontFamily": {
+                            "headline-lg-mobile": ["Libre Caslon Text"],
+                            "label-md": ["Manrope"],
+                            "title-lg": ["Manrope"],
+                            "headline-lg": ["Libre Caslon Text"],
+                            "display-lg": ["Libre Caslon Text"],
+                            "headline-md": ["Libre Caslon Text"],
+                            "body-lg": ["Manrope"],
+                            "body-md": ["Manrope"]
+                        },
+                        "fontSize": {
+                            "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                            "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                            "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                            "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "400"}],
+                            "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                        }
+                    },
+                },
+            }
+        }catch(_e){}
+    </script>
+    <meta charset="utf-8">
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary selection:text-on-primary">
+
+<!-- TopNavBar -->
+ <!-- TopNavBar -->
+<header class="bg-surface/90 dark:bg-surface/90 backdrop-blur-md text-primary docked full-width top-0 z-50 sticky border-b border-outline-variant/30 shadow-sm transition-all duration-300">
+    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto py-4">
+        <div class="flex items-center gap-stack-md">
+            <a href="#home" class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed tracking-tight">Yas Mehandis</a>
+        </div>
+        
+        <!-- Desktop Nav Items -->
+        <ul class="hidden md:flex items-center gap-gutter">
+            <li><a href="#home" class="text-primary hover:text-primary transition-colors duration-300 font-label-md text-label-md">Home</a></li>
+            <li><a href="#shop" class="text-on-surface hover:text-primary transition-colors duration-300 font-label-md text-label-md flex items-center gap-1">Shop <span class="material-symbols-outlined text-sm" data-original-icon="expand_more">expand_more</span></a></li>
+            <li><a href="#about" class="text-on-surface hover:text-primary transition-colors duration-300 font-label-md text-label-md">About Us</a></li>
+            <li><a href="#how-to-use" class="text-on-surface hover:text-primary transition-colors duration-300 font-label-md text-label-md">How to Use</a></li>
+            <li><a href="#reviews" class="text-on-surface hover:text-primary transition-colors duration-300 font-label-md text-label-md">Reviews</a></li>
+            <li><a href="#contact" class="text-on-surface hover:text-primary transition-colors duration-300 font-label-md text-label-md">Contact</a></li>
+        </ul>
+        
+        <div class="flex items-center gap-4">
+            <!-- Nav Bar Booking Button (Desktop) -->
+            <div class="hidden sm:block">
+                <a href="https://wa.me/919361646027?text=Hello%20Yas%20Mehandis!%20%E2%9D%A4%EF%B8%8F%0A%0AI%20would%20like%20to%20book%20a%20Henna%20appointment.%0A%0A%F0%9F%93%85%20Preferred%20Date%3A%20%0A%F0%9F%95%92%20Preferred%20Time%3A%20%0A%F0%9F%92%87%E2%80%8D%E2%99%80%EF%B8%8F%20Occasion%20(Bridal/Festival/Baby%20Shower)%3A%20" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary font-label-md text-xs px-5 py-2.5 rounded-full font-bold shadow-md hover:scale-105 transition-all inline-flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-sm">calendar_month</span> Book Appointment
+                </a>
+            </div>
+
+            <!-- Hamburger Button for Mobile Menu -->
+            <button id="mobile-menu-btn" class="block md:hidden text-on-surface hover:text-primary p-2 focus:outline-none transition-colors" aria-label="Toggle Menu">
+                <span id="menu-icon" class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Dark Backdrop Overlay (Blocks clicking behind the menu) -->
+    <div id="mobile-menu-overlay" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-50 transition-opacity duration-300 opacity-0 md:hidden"></div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden fixed inset-y-0 right-0 z-[60] w-full max-w-xs bg-[#2c2a27] border-l border-outline-variant/30 shadow-2xl p-6 transition-transform duration-300 transform translate-x-full md:hidden flex flex-col justify-between opacity-100" style="
+    background: black;
+    height: fit-content;
+">
+        <div class="space-y-6">
+            <div class="flex justify-between items-center">
+                <span class="font-headline-md text-primary text-xl">Menu</span>
+                <button id="mobile-menu-close" class="text-on-surface-variant hover:text-primary p-1">
+                    <span class="material-symbols-outlined text-2xl">close</span>
+                </button>
+            </div>
+            <ul class="flex flex-col gap-4 text-left">
+                <li><a href="#home" class="mobile-nav-link block text-lg text-primary py-2 font-label-md border-b border-outline-variant/10">Home</a></li>
+                <li><a href="#shop" class="mobile-nav-link block text-lg text-on-surface py-2 font-label-md border-b border-outline-variant/10">Shop</a></li>
+                <li><a href="#about" class="mobile-nav-link block text-lg text-on-surface py-2 font-label-md border-b border-outline-variant/10">About Us</a></li>
+                <li><a href="#how-to-use" class="mobile-nav-link block text-lg text-on-surface py-2 font-label-md border-b border-outline-variant/10">How to Use</a></li>
+                <li><a href="#reviews" class="mobile-nav-link block text-lg text-on-surface py-2 font-label-md border-b border-outline-variant/10">Reviews</a></li>
+                <li><a href="#contact" class="mobile-nav-link block text-lg text-on-surface py-2 font-label-md border-b border-outline-variant/10">Contact</a></li>
+            </ul>
+        </div>
+        <div class="mt-8">
+            <a href="https://wa.me/919361646027?text=Hello%20Yas%20Mehandis!%20%E2%9D%A4%EF%B8%8F%0A%0AI%20would%20like%20to%20book%20a%20Henna%20appointment.%0A%0A%F0%9F%93%85%20Preferred%20Date%3A%20%0A%F0%9F%95%92%20Preferred%20Time%3A%20%0A%F0%9F%92%87%E2%80%8D%E2%99%80%EF%B8%8F%20Occasion%20(Bridal/Festival/Baby%20Shower)%3A%20" target="_blank" rel="noopener noreferrer" class="w-full bg-primary text-on-primary font-label-md text-center py-3.5 rounded-full font-bold shadow-md hover:brightness-110 transition-all inline-flex justify-center items-center gap-1.5">
+                <span class="material-symbols-outlined text-sm">calendar_month</span> Book Appointment
+            </a>
+        </div>
+    </div>
+</header>
+
+<main class="">
+<!-- Hero Section -->
+<section id="home" class="hero-gradient relative overflow-hidden min-h-[85vh] flex items-center scroll-mt-20">
+<div class="absolute inset-0 henna-pattern-overlay"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-2 gap-gutter items-center relative z-10 py-12">
+<div class="space-y-stack-lg">
+<div class="space-y-stack-sm">
+<p class="font-headline-md text-primary italic">Art in Every Touch <span class="text-secondary">❤</span></p>
+<h1 class="font-display-lg text-display-lg text-on-surface leading-tight">Henna that<br><span class="text-primary italic">Celebrates You</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Premium Henna Cones, Stencils &amp; More for Every Beautiful Moment</p>
+</div>
+<div class="flex flex-wrap gap-stack-lg py-4 border-y border-outline-variant/20">
+<div class="flex flex-col items-center text-center gap-1">
+<span class="material-symbols-outlined text-primary">eco</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Organic &amp; Natural</span>
+</div>
+<div class="flex flex-col items-center text-center gap-1">
+<span class="material-symbols-outlined text-primary">spa</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Skin Friendly</span>
+</div>
+<div class="flex flex-col items-center text-center gap-1">
+<span class="material-symbols-outlined text-primary">science</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">No Chemicals</span>
+</div>
+<div class="flex flex-col items-center text-center gap-1">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Long Lasting</span>
+</div>
+<div class="flex flex-col items-center text-center gap-1">
+<span class="material-symbols-outlined text-primary">favorite</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Loved by Thousands</span>
+</div>
+</div>
+<!-- Updated Hero CTA Buttons Area -->
+<div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+  <a href="https://wa.me/919361646027?text=Hello%20Yas%20Mehandis!%20%E2%9D%A4%EF%B8%8F%0A%0AI%20want%20to%20shop%20your%20Henna%20products!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-8 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex justify-center items-center gap-2 group decoration-none shadow-lg">
+      Shop On WhatsApp
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.966 0c3.184.001 6.177 1.24 8.428 3.496 2.25 2.256 3.487 5.253 3.485 8.441-.004 6.621-5.342 11.97-11.913 11.97-2.006-.001-3.973-.506-5.718-1.464L0 24zm6.58-3.447l.38.225c1.552.921 3.424 1.408 5.34 1.409 5.8 0 10.517-4.689 10.52-10.452 0-2.792-1.082-5.417-3.047-7.388C17.525 2.476 14.92 1.396 12.119 1.396 6.32 1.396 1.6 6.086 1.597 11.85c-.001 1.989.517 3.93 1.501 5.656l.244.425-1.001 3.655 3.737-.98.397.236zm10.741-4.706c-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.667.149-.198.297-.766.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.667-1.609-.915-2.203-.242-.581-.487-.502-.667-.511-.173-.008-.371-.01-.569-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
+      </svg>
+  </a>
+  <a href="https://wa.me/919361646027?text=Hello%20Yas%20Mehandis!%20%E2%9D%A4%EF%B8%8F%0A%0AI%20would%20like%20to%20book%20a%20Henna%20appointment.%0A%0A%F0%9F%93%85%20Preferred%20Date%3A%20%0A%F0%9F%95%92%20Preferred%20Time%3A%20%0A%F0%9F%92%87%E2%80%8D%E2%99%80%EF%B8%8F%20Occasion%20(Bridal/Festival/Baby%20Shower)%3A%20" target="_blank" rel="noopener noreferrer" class="border-2 border-primary text-primary px-8 py-4 rounded-full font-bold hover:bg-primary hover:text-on-primary transition-all inline-flex justify-center items-center gap-2 shadow-lg">
+      <span class="material-symbols-outlined text-xl">calendar_month</span> Book Appointment
+  </a>
+</div>
+</div>
+<div class="relative flex justify-center items-center">
+<div class="absolute -z-10 w-full h-full bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative">
+<img src="backg2.jpg" class="rounded-3xl shadow-2xl border-4 border-primary/20 w-full max-w-lg object-cover aspect-[4/5]" data-alt="Premium, high-quality photograph of a woman's hands adorned with intricate, traditional bridal mehndi/henna patterns. The style is elegant and artisanal, with warm, soft lighting highlighting the detail of the henna."
+>
+<div class="absolute top-10 -right-10 bg-henna-deep/80 backdrop-blur-md p-6 rounded-2xl border border-primary/30 shadow-xl hidden lg:block">
+<p class="font-headline-md text-primary">Crafted<br>with Care &amp;<br>Tradition <span class="text-secondary">❤</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Bar -->
+<div class="absolute bottom-0 w-full bg-surface-container-low py-4 border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-mobile flex justify-around flex-wrap gap-4 text-primary opacity-80">
+<div class="flex items-center gap-2 font-label-md"><span class="material-symbols-outlined">verified</span> 100% Organic</div>
+<div class="flex items-center gap-2 font-label-md"><span class="material-symbols-outlined">science</span> Chemical Free</div>
+<div class="flex items-center gap-2 font-label-md"><span class="material-symbols-outlined" data-original-icon="health_and_safety">health_and_safety</span> Skin Safe</div>
+<div class="flex items-center gap-2 font-label-md"><span class="material-symbols-outlined">favorite</span> Made with Love</div>
+</div>
+</div>
+</section>
+
+<!-- Bestsellers Section (Shop) -->
+<section id="shop" class="bg-on-surface py-section-gap scroll-mt-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-12 space-y-2">
+<div class="flex justify-center items-center gap-2 text-on-surface-variant mb-4">
+<span class="w-12 h-px bg-outline"></span>
+<span class="material-symbols-outlined" data-original-icon="local_florist">local_florist</span>
+<span class="w-12 h-px bg-outline"></span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-surface">Our Bestsellers <span class="text-secondary-container">❤</span></h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest/50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-outline-variant/10">
+<div class="relative overflow-hidden rounded-lg mb-4 aspect-square">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Intricate bridal henna stencil designs showcasing a full palm and back-of-hand layout with delicate floral and geometric patterns. The product is displayed on a warm, parchment-style background with soft shadows, highlighting the artisanal handcrafted detail. Premium packaging is visible in the corner." 
+src="cat1.png">
+<span class="absolute top-2 left-2 bg-primary-container text-on-primary-container text-[10px] font-bold px-2 py-1 rounded">BESTSELLER</span>
+</div>
+<h3 class="font-title-lg text-surface mb-1">Bridal Stencils</h3>
+<p class="text-surface-variant text-sm mb-4">Intricate designs for your big day</p>
+<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
+    Shop On WhatsApp
+    
+</a>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest/50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-outline-variant/10">
+<div class="relative overflow-hidden rounded-lg mb-4 aspect-square">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Semi-bridal henna stencils featuring elegant, medium-coverage designs for festivals and celebrations. The image shows a set of stencils with classic South Asian motifs like peacocks and mandalas, set against a warm, inviting organic aesthetic with soft, natural lighting." 
+src="cat2.png">
+</div>
+<h3 class="font-title-lg text-surface mb-1">Semi Bridal Stencils</h3>
+<p class="text-surface-variant text-sm mb-4">Elegant designs for every celebration</p>
+<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
+    Shop On WhatsApp
+    
+</a>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest/50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-outline-variant/10">
+<div class="relative overflow-hidden rounded-lg mb-4 aspect-square">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cute baby shower henna stencil patterns featuring miniature footprints, stars, and tiny floral accents. The scene is bright and airy with soft pink and cream tones, including small props like baby shoes or rattles to create a joyful, miracle-celebrating mood." 
+src="cat3.png"
+>
+</div>
+<h3 class="font-title-lg text-surface mb-1">Baby Shower Stencils</h3>
+<p class="text-surface-variant text-sm mb-4">Adorable &amp; cute designs for your little miracles</p>
+<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
+    Shop On WhatsApp
+    
+</a>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest/50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-outline-variant/10">
+<div class="relative overflow-hidden rounded-lg mb-4 aspect-square">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-quality organic henna cones and a small bowl of fresh henna dip paste. The cones are made from artisanal kraft paper with elegant foil labeling. The rich, dark henna paste is textured and fresh, surrounded by natural elements like henna leaves and dried flowers in a warm, premium tabletop setting." 
+src="cat4.png"
+>
+</div>
+<h3 class="font-title-lg text-surface mb-1">Henna Cones &amp; Dip</h3>
+<p class="text-surface-variant text-sm mb-4">Rich color, smooth application, long lasting</p>
+<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
+    Shop On WhatsApp
+    
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Why Choose Section (About Us) -->
+<section id="about" class="bg-surface py-section-gap relative overflow-hidden scroll-mt-20">
+<div class="absolute top-0 right-0 w-64 h-64 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[300px] text-primary rotate-45" data-original-icon="local_florist">local_florist</span>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-4 gap-gutter items-start">
+<div class="md:col-span-1 space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-primary">Why Choose Yas Mehandis?<span class="text-secondary">❤</span></h2>
+<p class="text-on-surface-variant">Because you deserve the best henna experience with products that are safe, natural, and stunning.</p>
+ 
+</div>
+<div class="md:col-span-3 grid grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
+<div class="space-y-3">
+<span class="material-symbols-outlined text-primary text-4xl">eco</span>
+<h4 class="font-title-lg text-on-surface">Organic &amp; Natural</h4>
+<p class="text-sm text-on-surface-variant">Made with pure, natural ingredients directly from nature.</p>
+</div>
+<div class="space-y-3">
+<span class="material-symbols-outlined text-primary text-4xl" data-original-icon="science_off">science_off</span>
+<h4 class="font-title-lg text-on-surface">No Chemicals No Harm</h4>
+<p class="text-sm text-on-surface-variant">100% safe, with absolutely no harmful additives or toxins.</p>
+</div>
+<div class="space-y-3">
+<span class="material-symbols-outlined text-primary text-4xl" data-original-icon="volunteer_activism">volunteer_activism</span>
+<h4 class="font-title-lg text-on-surface">Skin Friendly &amp; Safe</h4>
+<p class="text-sm text-on-surface-variant">Gentle on all skin types, dermatologically tested for safety.</p>
+</div>
+<div class="space-y-3">
+<span class="material-symbols-outlined text-primary text-4xl">history</span>
+<h4 class="font-title-lg text-on-surface">Long Lasting Stain</h4>
+<p class="text-sm text-on-surface-variant">Achieve deep, rich color that stays beautiful for days.</p>
+</div>
+<div class="space-y-3">
+<span class="material-symbols-outlined text-primary text-4xl">air</span>
+<h4 class="font-title-lg text-on-surface">Smooth Flow Cones</h4>
+<p class="text-sm text-on-surface-variant">Easy to apply with perfect, consistent henna flow.</p>
+</div>
+<div class="space-y-3">
+<span class="material-symbols-outlined text-primary text-4xl">favorite</span>
+<h4 class="font-title-lg text-on-surface">Made with Love</h4>
+<p class="text-sm text-on-surface-variant">Every product is handcrafted with care for your moments.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- How to Use Section -->
+<section id="how-to-use" class="bg-on-surface py-section-gap scroll-mt-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex items-center gap-4 mb-12">
+<h2 class="font-headline-lg text-headline-lg text-surface">How to Use Stencils</h2>
+<span class="material-symbols-outlined text-primary" data-original-icon="local_florist">local_florist</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-lg">
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="bg-secondary-container text-on-secondary-container w-8 h-8 rounded-full flex items-center justify-center font-bold">1</span>
+<span class="material-symbols-outlined text-surface-variant" data-original-icon="dry_cleaning">dry_cleaning</span>
+</div>
+<p class="text-surface font-semibold">Place the stencil on clean, dry skin.</p>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="bg-secondary-container text-on-secondary-container w-8 h-8 rounded-full flex items-center justify-center font-bold">2</span>
+<span class="material-symbols-outlined text-surface-variant">edit_note</span>
+</div>
+<p class="text-surface font-semibold">Fill the design with henna using a cone.</p>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="bg-secondary-container text-on-secondary-container w-8 h-8 rounded-full flex items-center justify-center font-bold">3</span>
+<span class="material-symbols-outlined text-surface-variant">timer</span>
+</div>
+<p class="text-surface font-semibold">Let it dry for 2-3 hours.</p>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="bg-secondary-container text-on-secondary-container w-8 h-8 rounded-full flex items-center justify-center font-bold">4</span>
+<span class="material-symbols-outlined text-surface-variant">back_hand</span>
+</div>
+<p class="text-surface font-semibold">Gently remove the stencil &amp; let stain develop.</p>
+</div>
+</div>
+<div class="relative group cursor-pointer">
+<div class="absolute inset-0 bg-primary-container/20 rounded-2xl group-hover:scale-105 transition-transform"></div>
+<div class="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-surface-container-lowest/10">
+<a href="http://www.youtube.com/watch?v=ajSLVWB84oQ" target="_blank" rel="noopener noreferrer" class="block relative group cursor-pointer">
+  <!-- Hover Background Scale Effect -->
+  <div class="absolute inset-0 bg-primary-container/20 rounded-2xl group-hover:scale-105 transition-transform"></div>
+  
+  <!-- Image Container -->
+  <div class="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-surface-container-lowest/10">
+    <img 
+      class="w-full aspect-video object-cover" 
+      alt="A professional tutorial video thumbnail showing a woman applying henna through a stencil onto a client's hand." 
+      src="videobg.png"
+    >
+    
+    <!-- Play Button Overlay -->
+    <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-all">
+      <div class="bg-secondary-container text-on-secondary-container w-16 h-16 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+        <span class="material-symbols-outlined text-4xl fill">play_arrow</span>
+      </div>
+    </div>
+    
+    <!-- Info Badge -->
+    <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur p-4 rounded-xl max-w-xs shadow-lg">
+      <p class="text-surface font-bold text-sm">Watch &amp; Learn</p>
+      <p class="text-surface-variant text-xs">Step-by-step video tutorial for perfect application</p>
+    </div>
+  </div>
+</a>
+ 
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Testimonials Section (Reviews) -->
+<section id="reviews" class="bg-surface py-section-gap scroll-mt-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary">Loved by Our Customers <span class="text-secondary">❤</span></h2>
+<div class="flex justify-center gap-1 mt-4">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="w-2 h-2 rounded-full bg-primary/30"></span>
+<span class="w-2 h-2 rounded-full bg-primary/30"></span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/10 flex flex-col items-center text-center space-y-4">
+<div class="flex text-primary">
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant">"The stencils are super easy to use and the designs are just beautiful! Perfectly helped me for my cousin's wedding."</p>
+<div class="flex items-center gap-3 pt-4">
+<div class="text-left">
+<p class="font-bold text-sm text-on-surface">Aishwarya</p>
+<p class="text-xs text-on-surface-variant">Chennai</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/10 flex flex-col items-center text-center space-y-4">
+<div class="flex text-primary">
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant">"Henna cones stain so well and 100% organic. Highly recommended! The color lasted for over a week."</p>
+<div class="flex items-center gap-3 pt-4">
+ <div class="text-left">
+<p class="font-bold text-sm text-on-surface">Farheen</p>
+<p class="text-xs text-on-surface-variant">Coimbatore</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/10 flex flex-col items-center text-center space-y-4">
+<div class="flex text-primary">
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant">"Perfect for baby shower functions. Got so many compliments! The design was exactly what I wanted."</p>
+<div class="flex items-center gap-3 pt-4">
+ <div class="text-left">
+<p class="font-bold text-sm text-on-surface">Sowmya</p>
+<p class="text-xs text-on-surface-variant">Madurai</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Footer (Contact section wrapper) -->
+<footer id="contact" class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width mt-section-gap border-t border-outline-variant/20 scroll-mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto py-12">
+<div class="space-y-4">
+<h2 class="font-headline-md text-headline-md text-primary">Yas Mehandis</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">HENNA WITH LOVE</p>
+<p class="text-on-surface-variant text-sm">Bringing tradition, beauty &amp; purity to your special moments.</p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="https://www.instagram.com/yas_mehndis_karur/"><span class="material-symbols-outlined">camera</span></a>
+ 
+ 
+</div>
+</div>
+<div class="">
+<h4 class="text-primary font-bold mb-6 font-label-md text-label-md">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="#home">Home</a></li>
+<li><a class="text-primary font-bold hover:translate-x-1 inline-block transition-transform duration-200" href="#shop">Shop</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="#about">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="#how-to-use">How to Use</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 inline-block transition-transform duration-200" href="#reviews">Reviews</a></li>
+</ul>
+</div>
+<div class="">
+<h4 class="text-primary font-bold mb-6 font-label-md text-label-md">Customer Care</h4>
+<ul class="space-y-3 text-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">call</span> +91 93616 46027</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">mail</span> yasmehandis@gmail.com</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">location_on</span>Rayanur, Karur, Tamil Nadu, India</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm"></span> Open to Travel</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-primary font-bold mb-6 font-label-md text-label-md">Stay in the Loop</h4>
+<p class="text-sm text-on-surface-variant">Subscribe to get updates on new arrivals &amp; offers</p>
+<div class="flex flex-col gap-2 focus-within:ring-2 focus-within:ring-primary rounded-lg overflow-hidden">
+<input class="bg-surface-container-high border-none text-on-surface text-sm px-4 py-3 outline-none focus:ring-0" placeholder="Enter your email" type="email">
+<button class="bg-secondary-container text-on-secondary-container font-bold py-3 uppercase tracking-wider text-xs">SUBSCRIBE</button>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 py-6 px-margin-mobile md:px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex gap-6 text-[10px] text-on-surface-variant uppercase tracking-widest">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">lock</span> Secure Packaging</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">local_shipping</span> Fast Delivery</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">cached</span> Easy Returns</div>
+</div>
+<p class="text-xs text-on-surface-variant/70">© 2026 Yas Mehandis. All Rights Reserved. Designed By Prabhu</p>
+</div>
+</footer>
+
+<!-- Interactive Mobile Responsive Menu Logic -->
+<!-- Interactive Mobile Responsive Menu Logic -->
+<!-- Interactive Mobile Responsive Menu Logic -->
+<script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('mobile-menu-overlay');
+    const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function openMenu() {
+        mobileMenu.classList.remove('hidden');
+        overlay.classList.remove('hidden');
+        
+        // Small timeout to trigger CSS transitions smoothly
+        setTimeout(() => {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+            overlay.classList.remove('opacity-0');
+            overlay.classList.add('opacity-100');
+        }, 10);
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.remove('translate-x-0');
+        mobileMenu.classList.add('translate-x-full');
+        overlay.classList.remove('opacity-100');
+        overlay.classList.add('opacity-0');
+        
+        setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+            overlay.classList.add('hidden');
+        }, 300);
+    }
+
+    menuBtn.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu); // Closes menu if user clicks outside
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+</script>
+
+</body>
+</html>

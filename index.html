@@ -108,7 +108,130 @@
     background-image:url("bg2.jpg");
 }
 }
+
+.text-surface-variant {
+    
+    color:white !important;
+}
 	</style>
+	<style>
+.welcome-reward-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    margin-bottom: 24px;
+    border-radius: 999px;
+
+    background: linear-gradient(
+        135deg,
+        #f9d976 0%,
+        #d4af37 45%,
+        #f7e7a9 70%,
+        #c99832 100%
+    );
+
+    color: #24122f;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+
+    border: 1px solid rgba(255, 236, 170, 0.9);
+    box-shadow:
+        0 0 0 rgba(212, 175, 55, 0),
+        0 8px 25px rgba(212, 175, 55, 0.25);
+
+    animation: rewardFloat 3s ease-in-out infinite;
+    overflow: hidden;
+}
+
+/* Gold shimmer passing across the badge */
+.welcome-reward-badge::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.75),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+    animation: rewardShimmer 3.5s ease-in-out infinite;
+}
+
+/* Sparkles */
+.reward-sparkle {
+    font-size: 16px;
+    color: #fff8d6;
+    animation: sparklePulse 1.8s ease-in-out infinite;
+}
+
+.reward-sparkle:last-child {
+    animation-delay: 0.9s;
+}
+
+/* Floating effect */
+@keyframes rewardFloat {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow:
+            0 0 0 rgba(212, 175, 55, 0),
+            0 8px 25px rgba(212, 175, 55, 0.25);
+    }
+
+    50% {
+        transform: translateY(-5px);
+        box-shadow:
+            0 0 22px rgba(212, 175, 55, 0.35),
+            0 12px 30px rgba(212, 175, 55, 0.3);
+    }
+}
+
+/* Shimmer */
+@keyframes rewardShimmer {
+    0% {
+        left: -120%;
+    }
+
+    45%, 100% {
+        left: 140%;
+    }
+}
+
+/* Sparkle pulse */
+@keyframes sparklePulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.35);
+        opacity: 1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .welcome-reward-badge {
+        font-size: 12px;
+        padding: 9px 16px;
+        gap: 7px;
+    }
+
+    .reward-sparkle {
+        font-size: 13px;
+    }
+}
+</style>
+
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-primary selection:text-on-primary">
 
@@ -256,10 +379,7 @@ to-[#1B102A] shadow-2xl">
                 <!-- Left -->
                 <div class="p-8 md:p-14">
 
-                    <span class="inline-flex items-center gap-2 bg-yellow-500 text-black px-5 py-2 rounded-full font-semibold text-sm mb-6">
-                        🎁 Exclusive Loyalty Reward
-                    </span>
-
+                    <span class="welcome-reward-badge"> <span class="reward-sparkle">✦</span> <span>🎁 Exclusive Loyalty Reward</span> <span class="reward-sparkle">✦</span> </span>
                     <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
                         Welcome Back!
                     </h2>
@@ -348,15 +468,15 @@ to-[#1B102A] shadow-2xl">
     </div>
 </section>
 <!-- Bestsellers Section (Shop) -->
-<section id="shop" class="bg-on-surface py-section-gap scroll-mt-20">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<section id="shop" class="bg-on-surface py-section-gap scroll-mt-20" style="background:#1B102A;">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter" style="background:#1B102A;">
 <div class="text-center mb-12 space-y-2">
 <div class="flex justify-center items-center gap-2 text-on-surface-variant mb-4">
 <span class="w-12 h-px bg-outline"></span>
 <span class="material-symbols-outlined" data-original-icon="local_florist">local_florist</span>
 <span class="w-12 h-px bg-outline"></span>
 </div>
-<h2 class="font-headline-lg text-headline-lg text-surface">Our Bestsellers <span class="text-secondary-container">❤</span></h2>
+<h2 class="font-headline-lg text-headline-lg text-surface" style="color:#E7C76B;">Our Bestsellers <span class="text-secondary-container">❤</span></h2>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
 <!-- Product Card 1 -->
@@ -365,42 +485,46 @@ to-[#1B102A] shadow-2xl">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Intricate bridal henna stencil designs" src="sten.png">
 <span class="absolute top-2 left-2 bg-primary-container text-on-primary-container text-[10px] font-bold px-2 py-1 rounded">BESTSELLER</span>
 </div>
-<h3 class="font-title-lg text-surface mb-1">Bridal Stencils</h3>
-<p class="text-surface-variant text-sm mb-4">Intricate designs for your big day</p>
-<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
+<h3 class="font-title-lg text-surface mb-1" style="color:#E7C76B;"><b>Bridal Stencils</b></h3>
+<p class="text-surface-variant text-sm mb-4" style="color:#E7C76B;">Intricate designs for your big day</p>
+<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" 
+class=" inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 py-4 rounded-full transition duration-300 shadow-lg">
     Shop On WhatsApp
 </a>
 </div>
 <!-- Product Card 2 -->
-<div class="bg-surface-container-lowest/50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-outline-variant/10">
+<div class="bg-[#1B102A]/50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-outline-variant/10" style="background:#1B102A;" >
 <div class="relative overflow-hidden rounded-lg mb-4 aspect-square">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Semi-bridal henna stencils" src="sa.png">
 </div>
-<h3 class="font-title-lg text-surface mb-1">Semi Bridal Stencils</h3>
-<p class="text-surface-variant text-sm mb-4">Elegant designs for every celebration</p>
-<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
+<h3 class="font-title-lg text-surface mb-1" style="color:#E7C76B;"><b>Semi Bridal Stencils</b></h3>
+<p class="text-surface-variant text-sm mb-4" style="color:#E7C76B;">Elegant designs for every celebration</p>
+<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" 
+class="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 py-4 rounded-full transition duration-300 shadow-lg">
     Shop On WhatsApp
 </a>
 </div>
 <!-- Product Card 3 -->
-<div class="bg-surface-container-lowest/50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-outline-variant/10">
+<div class="bg-surface-container-lowest/50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-outline-variant/10" style="background:#1B102A;">
 <div class="relative overflow-hidden rounded-lg mb-4 aspect-square">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Baby shower henna stencil patterns" src="cat3.png">
 </div>
-<h3 class="font-title-lg text-surface mb-1">Baby Shower Stencils</h3>
-<p class="text-surface-variant text-sm mb-4">Adorable &amp; cute designs </p>
-<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
+<h3 class="font-title-lg text-surface mb-1" style="color:#E7C76B;"><b>Baby Shower Stencils</b></h3>
+<p class="text-surface-variant text-sm mb-4" style="color:#E7C76B;">Adorable &amp; cute designs </p>
+<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" 
+class="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 py-4 rounded-full transition duration-300 shadow-lg">
     Shop On WhatsApp
 </a>
 </div>
 <!-- Product Card 4 -->
-<div class="bg-surface-container-lowest/50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-outline-variant/10">
+<div class="bg-surface-container-lowest/50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-outline-variant/10" style="background:#1B102A;">
 <div class="relative overflow-hidden rounded-lg mb-4 aspect-square">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Organic henna cones and dip" src="cat4.png">
 </div>
-<h3 class="font-title-lg text-surface mb-1">Henna Cones &amp; Dip</h3>
-<p class="text-surface-variant text-sm mb-4">Rich color, long lasting</p>
-<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold hover:brightness-110 transition-all inline-flex items-center gap-2 group decoration-none">
+<h3 class="font-title-lg text-surface mb-1" style="color:#E7C76B;"><b>Henna Cones &amp; Dip</b></h3>
+<p class="text-surface-variant text-sm mb-4" style="color:#E7C76B;">Rich color, long lasting</p>
+<a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20shop%20now!" target="_blank" rel="noopener noreferrer" 
+class="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 py-4 rounded-full transition duration-300 shadow-lg">
     Shop On WhatsApp
 </a>
 </div>
@@ -454,41 +578,41 @@ to-[#1B102A] shadow-2xl">
 </section>
 
 <!-- How to Use Section -->
-<section id="how-to-use" class="bg-on-surface py-section-gap scroll-mt-20">
+<section id="how-to-use" class="bg-on-surface py-section-gap scroll-mt-20" style="background-color:#1B102A;">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
 <div class="flex items-center gap-4 mb-12">
-<h2 class="font-headline-lg text-headline-lg text-surface">How to Use Stencils</h2>
+<h2 class="font-headline-lg text-headline-lg text-surface" style="color:#E7C76B;">How to Use Stencils</h2>
 <span class="material-symbols-outlined text-primary" data-original-icon="local_florist">local_florist</span>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-lg">
 <div class="space-y-3">
 <div class="flex items-center gap-3">
-<span class="bg-secondary-container text-on-secondary-container w-8 h-8 rounded-full flex items-center justify-center font-bold">1</span>
+<span class="bg-secondary-container text-on-secondary-container w-8 h-8 rounded-full flex items-center justify-center font-bold" style="color:#E7C76B;">1</span>
 <span class="material-symbols-outlined text-surface-variant" data-original-icon="dry_cleaning">dry_cleaning</span>
 </div>
-<p class="text-surface font-semibold">Place the stencil on clean, dry skin.</p>
+<p class="text-surface font-semibold" style="color:#E7C76B;">Place the stencil on clean, dry skin.</p>
 </div>
 <div class="space-y-3">
 <div class="flex items-center gap-3">
-<span class="bg-secondary-container text-on-secondary-container w-8 h-8 rounded-full flex items-center justify-center font-bold">2</span>
+<span class="bg-secondary-container text-on-secondary-container w-8 h-8 rounded-full flex items-center justify-center font-bold" style="color:#E7C76B;" >2</span>
 <span class="material-symbols-outlined text-surface-variant">edit_note</span>
 </div>
-<p class="text-surface font-semibold">Fill the design with henna using a cone.</p>
+<p class="text-surface font-semibold" style="color:#E7C76B;">Fill the design with henna using a cone.</p>
 </div>
 <div class="space-y-3">
 <div class="flex items-center gap-3">
-<span class="bg-secondary-container text-on-secondary-container w-8 h-8 rounded-full flex items-center justify-center font-bold">3</span>
+<span class="bg-secondary-container text-on-secondary-container w-8 h-8 rounded-full flex items-center justify-center font-bold" style="color:#E7C76B;">3</span>
 <span class="material-symbols-outlined text-surface-variant">timer</span>
 </div>
-<p class="text-surface font-semibold">Let it dry for 2-3 hours.</p>
+<p class="text-surface font-semibold" style="color:#E7C76B;" >Let it dry for 2-3 hours.</p>
 </div>
 <div class="space-y-3">
 <div class="flex items-center gap-3">
-<span class="bg-secondary-container text-on-secondary-container w-8 h-8 rounded-full flex items-center justify-center font-bold">4</span>
+<span class="bg-secondary-container text-on-secondary-container w-8 h-8 rounded-full flex items-center justify-center font-bold" style="color:#E7C76B;" >4</span>
 <span class="material-symbols-outlined text-surface-variant">back_hand</span>
 </div>
-<p class="text-surface font-semibold">Gently remove the stencil &amp; let stain develop.</p>
+<p class="text-surface font-semibold" style="color:#E7C76B;">Gently remove the stencil &amp; let stain develop.</p>
 </div>
 </div>
 <div class="relative group cursor-pointer">
@@ -585,7 +709,7 @@ to-[#1B102A] shadow-2xl">
 
 <!-- Footer -->
 <footer id="contact" class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width mt-section-gap border-t border-outline-variant/20 scroll-mt-20">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-margin-mobile md:px-gutter max-w-container-max mx-auto py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-margin-mobile md:px-gutter   mx-auto py-12" style="background-color:#1B102A;">
 <div class="space-y-4">
 <h2 class="font-headline-md text-headline-md text-primary">Yas Mehandis</h2>
 <p class="text-on-surface-variant font-body-md text-body-md">HENNA WITH LOVE</p>
@@ -615,14 +739,13 @@ to-[#1B102A] shadow-2xl">
 </div>
 <div class="space-y-4">
 <h4 class="text-primary font-bold mb-6 font-label-md text-label-md">Stay in the Loop</h4>
-<p class="text-sm text-on-surface-variant">Subscribe to get updates on new arrivals &amp; offers</p>
+<p class="text-sm text-on-surface-variant">Send any Suggesstions to our email id</p>
 <div class="flex flex-col gap-2 focus-within:ring-2 focus-within:ring-primary rounded-lg overflow-hidden">
-<input class="bg-surface-container-high border-none text-on-surface text-sm px-4 py-3 outline-none focus:ring-0" placeholder="Enter your email" type="email">
-<button class="bg-secondary-container text-on-secondary-container font-bold py-3 uppercase tracking-wider text-xs">SUBSCRIBE</button>
+
 </div>
 </div>
 </div>
-<div class="border-t border-outline-variant/10 py-6 px-margin-mobile md:px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="border-t border-outline-variant/10 py-6 px-margin-mobile md:px-gutter   mx-auto flex flex-col md:flex-row justify-between items-center gap-4" style="background-color:#1B102A;">
 
     <div class="flex flex-col md:flex-row gap-3 md:gap-6 text-[10px] text-on-surface-variant uppercase tracking-widest w-full md:w-auto">
 
@@ -659,7 +782,7 @@ to-[#1B102A] shadow-2xl">
     </div>
 
     <p class="text-xs text-on-surface-variant/70 text-center md:text-right">
-        © 2026 Yas Mehandis. All Rights Reserved. Designed By Prabhu
+        © 2026 Yas Mehandis. All Rights Reserved. Designed By <a href="https://prabhun10.github.io/prabhu/" target="_blank">N.Prabhu</a>
     </p>
 
 </div>
